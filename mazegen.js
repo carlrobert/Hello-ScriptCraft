@@ -1,4 +1,7 @@
 // Maze generation based on http://rosettacode.org/wiki/Maze_generation#JavaScript
+
+var Drone = require('../drone').Drone;
+
 function maze_make(x,y) {
 	var n=x*y-1;
 	if (n<0) {
@@ -69,8 +72,8 @@ function maze_display(m) {
 // ScriptCraft stuff starts here
 // Helper function to parse the ASCII art into Drone actions
 // You might also consider creating a new maze_display but for now this will do the work
-function maze_draw(maze_string) {
-	var d = new Drone();
+function maze_draw(maze_string, d) {
+	// d is the Drone to use
 	d.up().chkpt('maze-start');
 	for (var j = 0; j < maze_string.length; j += 2) {
 		switch(maze_string.substr(j, 2)) {
@@ -96,9 +99,10 @@ function maze_draw(maze_string) {
 
 // User-facing code starts here
 // Example: Try /js amazing(5,7)
-function amazing(size_x, size_y) {
+Drone.extend('amazing', function(size_x, size_y) {
 	m = maze_make(size_x, size_y);
 	if (m.x > 0 && m.y > 0) {
-		maze_draw(maze_display(m));
+		maze_draw(maze_display(m), this);
 	}
-}
+});
+
