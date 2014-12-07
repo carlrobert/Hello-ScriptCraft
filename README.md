@@ -3,7 +3,7 @@ Hello-ScriptCraft
 
 ScriptCraft Experiments
 
-Put the .js files in ScriptCraft's js-plugins directory
+Put the .js files in a dedicated folder, for example, scriptcraft/plugins/<your name>
 
 Generate a rollercoaster: `rollercoaster()`
 -----------------------------------------
