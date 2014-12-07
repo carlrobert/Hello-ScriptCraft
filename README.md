@@ -10,5 +10,4 @@ Generate a rollercoaster: `rollercoaster()`
 
 * Point at a suitable location on the ground
 * In Minecraft, hit `t` and type `/js rollercoaster()`
-* This code is ported to CanaryMod based on code from https://github.com/mickej
-* 
+* This code is a port to ScriptCraft/CanaryMod based on code from https://github.com/mickej
