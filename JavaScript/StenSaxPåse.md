@@ -7,6 +7,7 @@ Sten > Sax > Påse > Sten
 * Påse vinner över sten
 
 Vårt spel kommer att bestå av 3 steg:
+
 1.	Spelaren (du) gör ditt val.
 2.	Datorn gör sitt val.
 3.	En funktion avgör vem som vinner. 
@@ -19,7 +20,7 @@ En JavaScript-funktion är ett kodblock utformad för att utföra en viss uppgif
 
 ![2](https://cloud.githubusercontent.com/assets/4598641/6098352/1be867d6-afdc-11e4-9cf7-1ff2393cfbfc.png)
 
-En *if-else*-sats avgör antingen eller, t.ex. antingen är jag äldre än 10 eller yngre än 10. Se exempel nedan- Vi kommer använda oss av *if else* senare och det är därför bra att bli bekant med den. 
+En *if-else*-sats avgör antingen eller, t.ex. antingen är jag äldre än 10 eller yngre än 10. Se exempel nedan. Vi kommer använda oss av *if else* senare och det är därför bra att bli bekant med den. 
 
 ![3](https://cloud.githubusercontent.com/assets/4598641/6098353/25435f02-afdc-11e4-9ec9-2bea912f0eec.png)
 
@@ -35,8 +36,8 @@ En *if-else*-sats avgör antingen eller, t.ex. antingen är jag äldre än 10 el
   ![6](https://cloud.githubusercontent.com/assets/4598641/6098357/2f6cfe3e-afdc-11e4-9e71-1b2c99f76e77.png)
   3.	Öppna nu *index.html* i din webbläsare. Ser du följande?  
   ![7](https://cloud.githubusercontent.com/assets/4598641/6098356/2f6c29be-afdc-11e4-965a-a28c69966f12.png)
-  *	Ja: bra jobbat! 
-  *	Nej: ingen fara fråga någon av mentorerna om hjälp. Det är helt ok att inte lyckas första gången.
+    *	Ja: bra jobbat! 
+    *	Nej: ingen fara fråga någon av mentorerna om hjälp. Det är helt ok att inte lyckas första gången.
 
 4.	Dags att låta datorn göra sitt val &ndash; ja det är helt möjligt. JavaScript har en inbyggd funktion som väljer ett decimaltal mellan 0 och 1. Den kan exempelvis välja 0,5645454; detta kommer representera ett värde senare. Gör följande för att skapa en funktion som låter datorn avgöra vilket val den gjort:
   1.	Skapa en funktion som heter *computerChoice()*
@@ -48,7 +49,7 @@ En *if-else*-sats avgör antingen eller, t.ex. antingen är jag äldre än 10 el
     *	Om inget av ovanstående, returnera sax.  
 ![9](https://cloud.githubusercontent.com/assets/4598641/6098359/2f6f2e20-afdc-11e4-907a-8d3daed623aa.png)
  
-5.	Dags att skriva en funktion för att skriva ut ett meddelande. Här kommer du kunna få två alternativ med hjälp av en *if-else*-sats samt med hjälp av så kallad boolean som kan vara sann eller falsk. T.ex. Lakrits är gott; en del av oss tycker det är gott en del tycker det är mindre gott. Påståendet kan alltså vara sant eller falskt. Gör följande;
+5.	Dags att skriva en funktion för att skriva ut ett meddelande. Här kommer du kunna få två alternativ med hjälp av en *if-else*-sats samt med hjälp av så kallad boolean som kan vara sann eller falsk. T.ex. Lakrits är gott; en del av oss tycker det är gott en del tycker det är mindre gott. Påståendet kan alltså vara sant eller falskt. Gör följande:
   1.	Skapa en funktion som heter *message* och tar in tre parametrar, *human*, *computer* och *humanIsWinner*.
   2.	Nu ska du se till så att om *humanIsWinner* är sant ska funktionen returnera *'Du valde ' + human + ', datorn valde ' + computer + ', du vinner'*
   3.	Om *humanIsWinner* är falskt ska funktionen returnera *'Du valde ' + human + ', datorn valde ' + computer + ', du förlorar'*  
