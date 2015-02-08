@@ -46,15 +46,13 @@ En if else sats avgör antingen eller, t.ex. antingen är jag äldre än 10 elle
   Gör följande:
   4.	Om randomNumber är större eller lika (<=) med 0.34 returnerar funktionen sten.
   5.	Om randomNumber är större eller lika (<=) med 0.67 returnerar funktionen påse.
-  6.	Om inget av ovanstående, returnera sax.
-
+  6.	Om inget av ovanstående, returnera sax.  
 ![9](https://cloud.githubusercontent.com/assets/4598641/6098359/2f6f2e20-afdc-11e4-907a-8d3daed623aa.png)
  
 5.	Dags att skriva en funktion för att skriva ut ett meddelande, här kommer du kunna få 2 alternativ med hjälp av en if-else sats samt med hjälp av så kallad boolean, en boolean kan vara sann eller falsk. T.ex. Lakrits är gott, en del av oss tycker det är gott en del tycker det är mindre gott. Påståendet kan alltså vara sant eller falskt. Gör följande;
   a.	Skapa en funktion som heter message och tar in 3 parametrar, human, computer och humanIsWinner.
   b.	Nu ska du se till så att om humanIsWinner är sant ska följande funktionen returnera *'Du valde ' + human + ', datorn valde ' + computer + ', du vinner'*
-c.	Om humanIsWinner är falskt ska funktionen returnera *'Du valde ' + human + ', datorn valde ' + computer + ', du förlorar'*
-
+c.	Om humanIsWinner är falskt ska funktionen returnera *'Du valde ' + human + ', datorn valde ' + computer + ', du förlorar'*  
 ![10](https://cloud.githubusercontent.com/assets/4598641/6098361/36937044-afdc-11e4-8c23-dc4ca716adb7.png)
  
 6.	Nu är det dags att jämföra de ditt val och datorns val, detta för du med hjälp av en funktion som du kallar för compare(), compare ska dock ta 2 styck parametrar human och computer. Detta gör du genom att skriva compare (human, computer) där human representerar ditt val och computer representerar datorns val. Ta följande steg;
@@ -69,16 +67,13 @@ c.	Om humanIsWinner är falskt ska funktionen returnera *'Du valde ' + human + '
   5.	Avsluta nu den nästlade if stasen.
   6. Till sist gör du en sista koll med hjälp av en else if sats där om human är lika med påse samt en nästlad if else;
     *	Om computer är lika med sten, säg till att funktionen massage returnerar ett värde där användaren vinner.
-    *	Annars returnerar du funktionen massage och säger till att användaren förlorar.
-
+    *	Annars returnerar du funktionen massage och säger till att användaren förlorar.  
 ![11](https://cloud.githubusercontent.com/assets/4598641/6098362/36b2ca48-afdc-11e4-9b93-f785f768b9d5.png)
  
-7.	Dags att köra vårt spel och se resultatet, skapa en funktion som heter play och i den ”kallar” du på alert(compare(userChoice(), computerChoice()));
-
+7.	Dags att köra vårt spel och se resultatet, skapa en funktion som heter play och i den ”kallar” du på alert(compare(userChoice(), computerChoice()));  
 ![12](https://cloud.githubusercontent.com/assets/4598641/6098363/36cd396e-afdc-11e4-9612-5316c121411f.png)
 	 
-8.	Öppna nu index.html och testa spelet. Händer följande?
-
+8.	Öppna nu index.html och testa spelet. Händer följande?  
 ![7](https://cloud.githubusercontent.com/assets/4598641/6098356/2f6c29be-afdc-11e4-965a-a28c69966f12.png)
 
 ![13](https://cloud.githubusercontent.com/assets/4598641/6098364/36cecf4a-afdc-11e4-9cb9-661b196c3e08.png)
