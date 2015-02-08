@@ -10,7 +10,6 @@ cylinder(material, radie, höjd)
 cylinder0(material, radie, höjd)
 sign([textrad1, textrad2], 63)
 ```
-
 När man kör kommandon skall `material` bytas ut mot ett Minecraft-material. 
 `bredd`, `höjd`, `djup`, `längd` och `radie` ska bytas ut mot siffror. 
 `textrad1` och `textrad2` ska bytas ut mot textsträngar.
@@ -21,14 +20,12 @@ Exempel på hur man kör:
 /js cylinder(blocks.oak, 10, 2)
 /js sign(['Hello', 'World!'], 63)
 ```
-
 Exempel på hur man kör program som andra användare gjort:
 ```javascript
 /js rainbow(30) 
 /js maze(5, 7) 
 /js dancefloor(10, 8)
 ```
-
 Gör ett eget program! Skriv in denna kod i en texteditor:
 ```javascript
 var Drone = require('drone');
