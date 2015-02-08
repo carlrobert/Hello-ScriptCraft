@@ -1,5 +1,4 @@
 Några byggkommandon i ScriptCraft som kan köras inifrån Minecraft:
-
 ```javascript
 box(material)
 box(material, bredd, höjd, djup)
@@ -16,7 +15,6 @@ När man kör kommandon skall `material` bytas ut mot ett Minecraft-material.
 `bredd`, `höjd`, `djup`, `längd` och `radie` ska bytas ut mot siffror. 
 `textrad1` och `textrad2` ska bytas ut mot textsträngar.
 Exempel på hur man kör:
-
 ```javascript
 /js box('41', 4, 7, 3)
 /js prism('35:14', 6, 10)
@@ -25,7 +23,6 @@ Exempel på hur man kör:
 ```
 
 Exempel på hur man kör program som andra användare gjort:
-
 ```javascript
 /js rainbow(30) 
 /js maze(5, 7) 
@@ -33,7 +30,6 @@ Exempel på hur man kör program som andra användare gjort:
 ```
 
 Gör ett eget program! Skriv in denna kod i en texteditor:
-
 ```javascript
 var Drone = require('drone');
 function mitthus() {
@@ -44,19 +40,16 @@ Drone.extend('mitthus', mitthus);
 ```
 Gör en egen mapp, t.ex. `CanaryMod/Scriptcraft/plugins/Kalle`
 Spara filen som `mitthus.js` i din nya mapp. Kör ditt program inifrån Minecraft genom att skriva:
-
 ```javascript
 /js refresh()
 /js mitthus()
 ```
 Drönaren kan använda alla byggkommandon och dessutom flytta på sig. Flyttkommandon som drönaren kan använda:
-
 ```javascript
 up(antalBlock)    down(antalBlock)
 left(antalBlock)  right(antalBlock)
 fwd(antalBlock)   turn(antalVridningar)
 ```
-
 Ändra koden genom att lägga till de nya raderna:
 ```javascript
 var Drone = require('drone');
@@ -72,7 +65,6 @@ function mitthus() {
 }
 Drone.extend('mitthus', mitthus);
 ```
-
 Spara dina ändringar och gör ```/js refresh()```. Kör sedan programmet igen.
 
 #### Felsökningstips
