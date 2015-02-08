@@ -1,10 +1,10 @@
-Sten, Sax, Påse i Javascript – Vad gör all kod bakom dina Minecraft-moddar?
+##Sten, Sax, Påse i Javascript – Vad gör all kod bakom dina Minecraft-moddar?
 
 Sten > Sax > Påse > Sten
 
-•	Sten vinner över sax
-•	Sax vinner över påse
-•	Påse vinner över sten
+* Sten vinner över sax
+* Sax vinner över påse
+* Påse vinner över sten
 
 Vårt spel kommer att bestå av 3 steg;
 
@@ -14,7 +14,7 @@ Vårt spel kommer att bestå av 3 steg;
 
 En variabel är ett objekt som kan tilldelas ett värde. T.ex. var x = 0. X har nu värdet 0. Se exemplet nedan för att förstå hur man tilldelar ett värde till en variabel.
 
- 
+![1](https://cloud.githubusercontent.com/assets/4598641/6096685/41be50e2-afa0-11e4-95f0-2c50da91da4f.png)
 
 En JavaScript-funktion är ett kodblock utformad för att utföra en viss uppgift. En funktion körs när något ”kallar” på funktionen.
 
