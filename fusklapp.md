@@ -79,3 +79,4 @@ Spara dina ändringar och gör ```/js refresh()```. Kör sedan programmet igen.
 Använd ```/js <tabbtangent>```
 för att se alla tillgängliga kommandon. Om ```mitthus()``` saknas i listan är något fel. Kolla felutskrifter i svarta fönstret; de syns inte i chatten.
 
+*Testade versioner: CanaryMod 1.2.0 (Minecraft 1.8+), scriptcraft-3.1.1*
