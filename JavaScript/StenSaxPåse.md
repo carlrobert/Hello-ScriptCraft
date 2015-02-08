@@ -111,3 +111,4 @@ f.	Till sist gör du en sista koll med hjälp av en else if sats där om human �
 
 ![16](https://cloud.githubusercontent.com/assets/4598641/6098367/36d852b8-afdc-11e4-9382-526b10a0e786.png)
  
+[PDF](https://gitprint.com/carlrobert/Hello-ScriptCraft/blob/master/JavaScript/StenSaxP%C3%A5se.md)
