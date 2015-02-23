@@ -1,4 +1,5 @@
 [PDF för utskrift](https://gitprint.com/carlrobert/Hello-ScriptCraft/blob/master/fusklapp.md)
+
 Några byggkommandon i ScriptCraft som kan köras inifrån Minecraft:
 ```javascript
 box(material)
