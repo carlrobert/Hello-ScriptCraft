@@ -70,6 +70,14 @@ Spara dina ändringar och gör ```/js refresh()```. Kör sedan programmet igen.
 Använd ```/js <tabbtangent>```
 för att se alla tillgängliga kommandon. Om ```mitthus()``` saknas i listan är något fel. Kolla felutskrifter i svarta fönstret; de syns inte i chatten.
 
+Använd F3 i chatten för att se koordinater. Testa kod i chatten genom att skriva den en rad i taget:
+```javascript
+/js var b = self.world.getBlockAt(219,64,102) // blocket nås nu via b
+/js b // se blockets egenskaper
+/js b.typeId // blockmaterial
+/js b.data // färg på t.ex. blocks.wool
+```
+
 [PDF för utskrift](https://gitprint.com/carlrobert/Hello-ScriptCraft/blob/master/fusklapp.md)
 
 *Testade versioner: CanaryMod 1.2.0 (Minecraft 1.8+), scriptcraft-3.1.1*
