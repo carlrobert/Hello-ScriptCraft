@@ -2,7 +2,7 @@
 // This code is a CanaryMod/ScripCraft port of Mikael Jönsson's code published on http://vaxjo.coderdojo.se/scriptcraft-rollercoaster/
 // This code has been tested with CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded and ScriptCraft 3.0.1-2014-11-14	
 
-var Drone = require('../drone/drone').Drone;
+var Drone = require('drone');
 
 function rail_up(drone, block_type, length) {
   drone.box(block_type, 1, 1, length);
