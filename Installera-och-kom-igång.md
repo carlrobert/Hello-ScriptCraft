@@ -15,102 +15,141 @@ När man skriver kod använder man inte vanliga ordbehandlare (som exempelvis Wo
 
 För att kunna modda Minecraft måste du ha ett Minecraft-konto. All annan programvara som behövs är gratis.
 
-För några enkla programmeringsexempel se nästa sida Programmera drönaren!
+För några enkla programmeringsexempel, se nästa sida: [Programmera drönaren!](http://www.malinc.se/programming/minecraft/programDrone.php)
 
-Ladda ner och installera en texteditor
+##Ladda ner och installera en texteditor
 
-Linux
+###Linux
 
-Använd exempelvis gedit vilket är förinstallerat på många Linux-distributioner.
+Använd exempelvis *gedit* vilket är förinstallerat på många Linux-distributioner.
 
-Mac
+###Mac
 
-Ladda ner och installera Sublime Text.
+Ladda ner och installera [Sublime Text](http://www.sublimetext.com/).
 
-Windows
+###Windows
 
-Ladda ner och installera Notepad++.
+Ladda ner och installera [Notepad++](http://notepad-plus-plus.org/).
 
-Java
+##Java
 
-Om du inte redan har Java installerat så installera det!
+Om du inte redan har Java installerat så [installera det](http://www.java.com/sv/)!
 
-Java-versioner på Mac
+###Java-versioner på Mac
 
 Efter att ha installerat den senaste versionen av Java (i skrivande stund version 8), kan det vara så att terminalen fortfarande bara hittar en gammal version. För att kolla vilken version terminalen hittar, skriv:
 
+```
 java -version
+```
+
 Om svaret blir en gammal version, skriv in följande:
 
+```
 '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java' -version
-Om svaret nu blir den senaste versionen, skriv in detta och fyll i lösenordet när Password: dyker upp:
+```
 
+Om svaret nu blir den senaste versionen, 
+skriv in detta och fyll i lösenordet när *Password:* dyker upp:
+
+```
 sudo mv /usr/bin/java /usr/bin/java-1.6
+```
+
 Skriv sedan in:
 
+```
 sudo ln -s '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java' /usr/bin/java
-Testa sedan att skriva in java -version igen. Nu bör svaret bli den senaste versionen. Om inget funkar, kolla in osx + java 7 = painfully easy.
+```
 
-Sätt upp servern
+Testa sedan att skriva in ```java -version``` igen. Nu bör svaret bli den senaste versionen. Om inget funkar, kolla in osx + [java 7 = painfully easy](https://gist.github.com/johan/10590467).
 
-Gör en mapp MinecraftServer på något lämpligt ställe. Ladda ner den rekommenderad versionen av Canarymod härifrån och lägg den i mappen MinecraftServer.
+##Sätt upp servern
 
-Öppna terminalen (Mac/Linux) eller DOS-fönstret (Windows). Gå till mappen MinecraftServer genom att använda kommandot cd (change directory).
+Gör en mapp *MinecraftServer* på något lämpligt ställe. 
+Ladda ner den rekommenderad versionen av Canarymod 
+[härifrån](https://ci.visualillusionsent.net/job/CanaryMod/599/artifact/target/CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar) och lägg den i mappen *MinecraftServer*.
 
-Man går in en mapp med namnet EnMapp genom att skriva cd EnMapp.
-Man går tillbaka (upp ett steg i filhierarkin) genom att skriva cd ..
-Man ser alla filer och mappar där man befinner sig genom att skriva ls (Mac/Linux) eller dir (Windows).
-När du befinner dig i mappen MinecraftServer, skriv:
+Öppna terminalen (Mac/Linux) eller DOS-fönstret (Windows).
+Gå till mappen MinecraftServer genom att använda kommandot *cd* (change directory).
 
+*Man går in en mapp med namnet *EnMapp* genom att skriva *cd EnMapp*.
+*Man går tillbaka (upp ett steg i filhierarkin) genom att skriva *cd ..*
+*Man ser alla filer och mappar där man befinner sig genom att skriva *ls*
+(Mac/Linux) eller *dir* (Windows).
+
+När du befinner dig i mappen *MinecraftServer*, skriv:
+
+```
 java -Xmx1024M -jar CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar -o true
-Första gången du kör detta kommandon skapas ett antal mappar och filer. En av filerna som skapas är eula.txt. Öppna eula.txt med en texteditor och acceptera villkoren genom att ändra nedersta raden till:
+```
 
+Första gången du kör detta kommandon skapas ett antal mappar och filer. 
+En av filerna som skapas är *eula.txt*. Öppna *eula.txt* med en texteditor och acceptera villkoren genom att ändra nedersta raden till:
+
+```
 eula=TRUE
+```
+
 Spara filen.
 
-Hämta filen sciptcraft.jar från https://github.com/walterhiggins/ScriptCraft/releases. Placera sciptcraft.jar i MinecraftServer/plugins. Kör kommandot igen:
+Hämta senaste versionen av filen
+[scriptcraft.jar](https://github.com/walterhiggins/ScriptCraft/releases)
+och placera den *MinecraftServer/plugins*. Kör kommandot igen:
 
-java -Xmx1024M -jar CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar -o true
-Nu startar servern och det görs en ny mapp scriptcraft i mappen MinecraftServer.
+```
+java -Xmx1024M -jar CanaryMod-1.2.0.jar -o true
+```
 
-Avsluta servern genom att skriva stop. Avsluta alltid servern på detta vis.
+Nu startar servern och det görs en ny mapp *scriptcraft* i mappen MinecraftServer.
 
-Gör ett startscript
+Avsluta servern genom att skriva *stop*.
+Avsluta alltid servern på detta vis, annars kan du skada din Minecraftvärld.
+
+##Enklare start med ett startscript
 
 För att på ett enkelt sätt kunna starta servern behöver du ett startscript.
 
-Linux
+###Linux
 
-Öppna gedit (eller en annan texteditor) och klistra in följande kod:
+Öppna *gedit* (eller en annan texteditor) och klistra in följande kod:
 
+```
 #!/bin/sh
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
-java -Xmx1024M -jar CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar -o true
-Om din serverfil inte heter CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar så byt ut filnamnet (den gröna texten) till rätt filnamn.
+java -Xmx1024M -jar CanaryMod-1.2.0.jar -o true
+```
 
-Spara filen som start_server.sh i mappen MinecraftServer.
+Om din serverfil inte heter CanaryMod-1.2.0.jar så byt ut filnamnet (den gröna texten) till rätt filnamn.
 
-Ändra behörigheten på startscriptet så att den blir körbar.Skriv in följande kommando i terminalen: chmod +x start_server.sh
+Spara filen som *start_server.sh* i mappen *MinecraftServer*.
 
-Starta servern genom att skriva server.sh i terminalen.
+Ändra behörigheten på startscriptet så att den blir körbar.
+Skriv in följande kommando i terminalen: *chmod +x start_server.sh*
 
-Mac
+Starta servern genom att skriva *server.sh* i terminalen.
+
+###Mac
 
 Öppna Sublime Text (eller en annan texteditor) och klistra in följande kod.
 
+```
 #!/bin/bash
 cd "$( dirname "$0" )"
-java -Xmx1024M -jar CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar -o true
-Om din serverfil inte heter CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar så byt ut filnamnet (den gröna texten) till rätt filnamn.
+java -Xmx1024M -jar CanaryMod-1.2.0.jar -o true
+```
 
-Spara filen som start_server.command i mappen MinecraftServer.
+Om din serverfil inte heter *CanaryMod-1.2.0.jar* så byt ut filnamnet (den gröna texten) till rätt filnamn.
 
-Ändra behörigheten på startscriptet så att den blir körbar. Skriv in följande kommando i terminalen: chmod a+x start_server.command
+Spara filen som *start_server.command* i mappen *MinecraftServer*.
 
-Starta servern genom att dubbelklicka på start_server.command.
+Ändra behörigheten på startscriptet så att det blir körbart. 
+Skriv in följande kommando i terminalen: ```chmod a+x start_server.command```
 
-Windows
+Starta servern genom att dubbelklicka på *start_server.command*.
+
+###Windows
 
 Öppna Notepad++ (eller en annan texteditor) och klistra in följande kod.
 
