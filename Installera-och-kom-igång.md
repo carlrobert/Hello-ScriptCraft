@@ -1,0 +1,179 @@
+#Installera och kom igång!
+
+ScriptCraft är ett plugin till en Minecraft-server.
+Med ScriptCraft kan du modda Minecraft genom att programmera i Javascript. 
+ScriptCraft är speciellt gjord för nybörjare och innehåller bland annat en så kallad drönare (drone på engelska). 
+Drönaren används för att bygga saker i Minecraft och du programmerar själv vad drönaren skall bygga. 
+
+För att använda ScriptCraft måste du först sätta upp en egen server. 
+ScriptCraft är gjord för att fungera med [CanaryMod](http://canarymod.net/).
+
+Det finns instruktioner på engelska för installering av [ScriptCraft](http://scriptcraftjs.org/).
+Det här en sammanfattning på svenska.
+
+När man skriver kod använder man inte vanliga ordbehandlare (som exempelvis Word) eftersom ordbehandlare formaterar texten. Det finns speciella utvecklingsmiljöer gjorda för programmering som ofta är svåra att använda för nybörjare. Det finns också enklare texteditorer som inte är så avancerade men lättanvända. Här får du förslag på en texteditor som inte är allt för avancerad men funkar bra för programmering.
+
+För att kunna modda Minecraft måste du ha ett Minecraft-konto. All annan programvara som behövs är gratis.
+
+För några enkla programmeringsexempel se nästa sida Programmera drönaren!
+
+Ladda ner och installera en texteditor
+
+Linux
+
+Använd exempelvis gedit vilket är förinstallerat på många Linux-distributioner.
+
+Mac
+
+Ladda ner och installera Sublime Text.
+
+Windows
+
+Ladda ner och installera Notepad++.
+
+Java
+
+Om du inte redan har Java installerat så installera det!
+
+Java-versioner på Mac
+
+Efter att ha installerat den senaste versionen av Java (i skrivande stund version 8), kan det vara så att terminalen fortfarande bara hittar en gammal version. För att kolla vilken version terminalen hittar, skriv:
+
+java -version
+Om svaret blir en gammal version, skriv in följande:
+
+'/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java' -version
+Om svaret nu blir den senaste versionen, skriv in detta och fyll i lösenordet när Password: dyker upp:
+
+sudo mv /usr/bin/java /usr/bin/java-1.6
+Skriv sedan in:
+
+sudo ln -s '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java' /usr/bin/java
+Testa sedan att skriva in java -version igen. Nu bör svaret bli den senaste versionen. Om inget funkar, kolla in osx + java 7 = painfully easy.
+
+Sätt upp servern
+
+Gör en mapp MinecraftServer på något lämpligt ställe. Ladda ner den rekommenderad versionen av Canarymod härifrån och lägg den i mappen MinecraftServer.
+
+Öppna terminalen (Mac/Linux) eller DOS-fönstret (Windows). Gå till mappen MinecraftServer genom att använda kommandot cd (change directory).
+
+Man går in en mapp med namnet EnMapp genom att skriva cd EnMapp.
+Man går tillbaka (upp ett steg i filhierarkin) genom att skriva cd ..
+Man ser alla filer och mappar där man befinner sig genom att skriva ls (Mac/Linux) eller dir (Windows).
+När du befinner dig i mappen MinecraftServer, skriv:
+
+java -Xmx1024M -jar CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar -o true
+Första gången du kör detta kommandon skapas ett antal mappar och filer. En av filerna som skapas är eula.txt. Öppna eula.txt med en texteditor och acceptera villkoren genom att ändra nedersta raden till:
+
+eula=TRUE
+Spara filen.
+
+Hämta filen sciptcraft.jar från https://github.com/walterhiggins/ScriptCraft/releases. Placera sciptcraft.jar i MinecraftServer/plugins. Kör kommandot igen:
+
+java -Xmx1024M -jar CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar -o true
+Nu startar servern och det görs en ny mapp scriptcraft i mappen MinecraftServer.
+
+Avsluta servern genom att skriva stop. Avsluta alltid servern på detta vis.
+
+Gör ett startscript
+
+För att på ett enkelt sätt kunna starta servern behöver du ett startscript.
+
+Linux
+
+Öppna gedit (eller en annan texteditor) och klistra in följande kod:
+
+#!/bin/sh
+BINDIR=$(dirname "$(readlink -fn "$0")")
+cd "$BINDIR"
+java -Xmx1024M -jar CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar -o true
+Om din serverfil inte heter CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar så byt ut filnamnet (den gröna texten) till rätt filnamn.
+
+Spara filen som start_server.sh i mappen MinecraftServer.
+
+Ändra behörigheten på startscriptet så att den blir körbar.Skriv in följande kommando i terminalen: chmod +x start_server.sh
+
+Starta servern genom att skriva server.sh i terminalen.
+
+Mac
+
+Öppna Sublime Text (eller en annan texteditor) och klistra in följande kod.
+
+#!/bin/bash
+cd "$( dirname "$0" )"
+java -Xmx1024M -jar CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar -o true
+Om din serverfil inte heter CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar så byt ut filnamnet (den gröna texten) till rätt filnamn.
+
+Spara filen som start_server.command i mappen MinecraftServer.
+
+Ändra behörigheten på startscriptet så att den blir körbar. Skriv in följande kommando i terminalen: chmod a+x start_server.command
+
+Starta servern genom att dubbelklicka på start_server.command.
+
+Windows
+
+Öppna Notepad++ (eller en annan texteditor) och klistra in följande kod.
+
+java -Xmx1024M -jar CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar -o true
+PAUSE
+Om din serverfil inte heter CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar så byt ut filnamnet (den gröna texten) till rätt filnamn.
+
+Spara filen som run.bat i mappen MinecraftServer.
+
+Starta servern genom att dubbelklicka på run.bat.
+
+Testa servern i Minecraft
+
+Starta servern.
+Gör dig själv till "server operatör" genom att skriva op spelarnamn i konsolen. Ordet spelarnamn skall bytas till ditt eget spelarnamn i Minecraft.
+Starta Minecraft.
+Välj rätt version av Minecraft.
+Om server-filen heter CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar så är den gjord för version 1.7.10.
+Välj Edit Profile i Minecraft och välj sedan en version som passar servern efter Use version.
+Spara profilen.
+Klicka på Play och välj Multiplayer.
+Klicka på Add server.
+Välj ett servernamn vilket som helst och skriv in localhost under Server Address.
+Börja spela på den nya servern.
+Klicka på t för att få upp en textrad som man kan skriva på. Skriv in
+/js 1+1
+Om talet 2.0 dyker upp så har du lyckats köra din första Javascript-kod i Minecraft!
+Några enkla byggkommandon
+
+Alla byggblock i Minecraft har ett id-nummer. På sidan Minecraft ID List finns en fullständig lista. Exempelvis har guld id-nummer 41 och röd ull id-nummer 35:14.
+
+Prova att skriva in kommandona:
+
+/js box('41')
+/js box('35:14')
+Ett rätblock har en bredd, ett djup och en höjd. Gör ett rätblock genom att skriva kommandot:
+
+/js box('41', 3, 5, 10)
+Hur gör man ett rätblock av röd ull som är 2 block bred, 100 block hög och 1 block djupt? Testa dig fram!
+
+Pelare av röd ull
+Pelare av röd ull
+Det finns även kommandon för att göra cylindrar. Prova kommandona:
+
+/js cylinder('41', 3, 5)
+/js cylinder0('41', 5, 3)
+Du kan återanvända kommandon som du skrivit. När textraden visas trycker du på pil upp eller pil ned för att se gamla kommandon. Sedan kan du förflytta dig längs ett kommando med hjälp av högerpil och vänsterpil.
+
+Hur gör man en ihålig guldcylinder som har radien 10 och höjden 2?
+
+Guldcylindrar
+Guldcylindrar i skymningen
+Om man vill göra tak till hus kan man använda sig av ett prisma. Prova kommandona:
+
+/js prism('35:14', 6, 10)
+/js prism0('35:14', 15, 5)
+Färdiga program
+
+I mappen CraftBukkit/plugins/scriptcraft/plugins/drone/contrib finns exempelprogram som olika användare gjort. Prova några av programmen genom att skriva:
+
+/js rainbow(30)
+/js maze(5, 7)
+/js dancefloor(10, 8)
+Öppna något av programmen i texteditorn och betrakta koden!
+
+Om du vill göra ett längre program själv, måste du skriva det i texteditorn, spara filen, och sedan köra programmet inifrån Minecraft. Se nästa sida Programmera drönaren! för mer information.
