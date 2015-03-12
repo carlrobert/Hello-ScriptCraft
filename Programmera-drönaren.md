@@ -99,7 +99,7 @@ Provkör programmet i Minecraft!
 
 ###Gör en variabel
 
-Om du vill ändra storlek på huset så att det är 5*5 block istället för 10*10 block,
+Om du vill ändra storlek på huset så att det är 5\*5 block istället för 10\*10 block,
 så måste du gå in och byta ut en siffra på sex olika ställen i koden.
 För att göra sådana ändringar enklare, kan du införa en variabel istället 
 för att använda siffran 10.
@@ -150,7 +150,7 @@ Kör koden inifrån Minecraft genom att exempelvis skriva
 
 ###Kedja ihop byggkommandona
 
-Istället för att skriva varje byggkommando som ```d.kommando();c
+Istället för att skriva varje byggkommando som ```d.kommando();```
 kan man kedja ihop allt byggande med hjälp av punkter. Koden kan skrivas som:
 
 ```javascript
