@@ -91,19 +91,23 @@ function mitthus() {
 
 Drone.extend('mitthus', mitthus);
 ```
-Det som står efter // är så kallad kommentarer. Kommentarer är till för den som läser koden och exekveras inte.
+Det som står efter *//* är så kallade kommentarer. Kommentarer är till för den som läser koden och körs inte.
 
 Provkör programmet i Minecraft!
 
 Mitt hus
 Mitt hus
-Gör en variabel
 
-Om du vill ändra storlek på huset så att det är 5*5 block istället för 10*10 block, så måste du gå in och byta ut en siffra på sex olika ställen i koden. För att göra sådana ändringar enklare, kan du införa en variabel istället för att använda siffran 10.
+###Gör en variabel
 
-Ändra koden till:
+Om du vill ändra storlek på huset så att det är 5*5 block istället för 10*10 block,
+så måste du gå in och byta ut en siffra på sex olika ställen i koden.
+För att göra sådana ändringar enklare, kan du införa en variabel istället 
+för att använda siffran 10.
 
-var Drone = require('../drone/drone').Drone;
+Ändra koden till
+```javascript
+var Drone = require('drone');
 
 function mitthus() {
     var storlek = 5;
@@ -115,15 +119,20 @@ function mitthus() {
 }
 
 Drone.extend('mitthus', mitthus);
+```
+
 Prova att ge variabeln storlek olika värden.
 
-Låt användaren bestämma storleken
+###Låt användaren bestämma storleken
 
-Istället för att ändra värdet på variabeln storlek inne i koden, kan du låta användaren ange storleken inifrån Minecraft. Detta gör du genom att ta bort variabeln och istället ge funktionen en så kallad parameter innanför parenteserna.
+Istället för att ändra värdet på variabeln *storlek* inne i koden,
+kan du låta användaren ange storleken inifrån Minecraft.
+Detta gör du genom att ta bort variabeln och istället 
+ge funktionen en så kallad parameter innanför parenteserna.
 
-Ändra koden till:
-
-var Drone = require('../drone/drone').Drone;
+Ändra koden till
+```javascript
+var Drone = require('drone');
 
 function mitthus(storlek) {
     this.box('41', storlek, 1, storlek);  //guldgolv
@@ -134,27 +143,34 @@ function mitthus(storlek) {
 }
 
 Drone.extend('mitthus', mitthus);
-Kör koden inifrån Minecraft genom att exempelvis skriva:
+```
+Kör koden inifrån Minecraft genom att exempelvis skriva 
+```/js mitthus(7)```
 
-/js mitthus(7)
 Flera hus
 Olika stora hus
-Kedja ihop byggkommandona
 
-Istället för att skriva varje byggkommando som d.kommando(); kan man kedja ihop allt byggande med hjälp av punkter. Koden kan skrivas som:
+###Kedja ihop byggkommandona
 
-var Drone = require('../drone/drone').Drone;
+Istället för att skriva varje byggkommando som ```d.kommando();c
+kan man kedja ihop allt byggande med hjälp av punkter. Koden kan skrivas som:
+
+```javascript
+var Drone = require('drone');
 
 function mitthus(s) {
     this.box('41', s, 1, s).up().box('20', s, 2, s).up(2).box('152', s, 1, s);
 }
 
 Drone.extend('mitthus', mitthus);
+```
+
 där parameternamnet har förkortats till s.
 
 Man kan också använda en kedja av kommandon som är uppdelad på flera rader.
 
-var Drone = require('../drone/drone').Drone;
+```javascript
+var Drone = require('drone');
 
 function mitthus(s) {
     this
@@ -166,63 +182,76 @@ function mitthus(s) {
 }
 
 Drone.extend('mitthus', mitthus);
-Skriv en villkorssats och ge ett felmeddelande
+```
 
-Obs: Skyltar fungerar ännu inte helt ut i CanaryMod.
+###Skriv en villkorssats och ge ett felmeddelande
+
+*Obs! Skyltar fungerar ännu inte helt ut i CanaryMod*
 
 När man låter användare ange parametervärden är det en god idé att kontrollera vad användaren faktiskt matat in, och eventuellt ge ett felmeddelande. Det kan exempelvis fungera så här:
 
-Om användaren angett en storlek mindre än 3 
-        ge ett felmeddelande 
-annars 
-        bygg huset
-En sådan villkorssats kan du skriva med hjälp av en så kallad if-else-sats. Principen för en if-else-sats visas här:
+* Om användaren angett en storlek mindre än 3 
+  * ge ett felmeddelande 
+* annars 
+  * bygg huset
 
+En sådan villkorssats kan du skriva med hjälp av en så kallad
+*if-else*-sats. Principen för en *if-else*-sats visas här:
+
+```javascript
 if (villkor) {
-    //kod som skall köras om villkoret är sant 
+    // kod som ska köras om villkoret är sant 
 } else {
-    //kod som skall köras om villkoret är falskt 
+    //kod som ska köras om villkoret är falskt 
 }
-villkor skall vara ett logiskt uttryck, det vill säga ett uttryck som är antingen sant eller falskt, exempelvis en olikhet.
+```
 
-Felmeddelandet kan visas på en Minecraft-skylt. Drönaren kan göra en skylt med hjälp av metoden sign.
+*villkor* ska vara ett logiskt uttryck, det vill säga ett uttryck som är 
+antingen sant eller falskt, exempelvis en olikhet.
 
-Ändra koden till:
+Felmeddelandet kan visas på en Minecraft-skylt.
+Drönaren kan göra en skylt med hjälp av metoden *sign*.
 
-var Drone = require('../drone/drone').Drone;
+Ändra koden till
+
+```javascript
+var Drone = require('drone');
 
 function mitthus(s) {
     if ( s < 3 ) {
-        this.sign(['Huset skall','vara minst', '3*3 block stort'], 63);
+        this.sign(['Huset ska','vara minst', '3*3 block stort'], 63);
     } else {
         this.box('41', s, 1, s).up().box('20', s, 2, s).up(2).box('152', s, 1, s);
     }
 }
 
 Drone.extend('mitthus', mitthus);
-Provkör:
+```
 
-/js mitthus(2)
+Provkör: ```/js mitthus(2)```
+
 Felmeddelande
 Felmeddelande
-För mer information (på engelska) om skyltar se Drone.sign() method.
 
-Skriv en loop
+För mer information (på engelska) om skyltar se [Drone.sign()](https://github.com/walterhiggins/ScriptCraft/blob/master/docs/API-Reference.md#dronesign-method).
+
+##Skriv en loop
 
 Om man vill göra ett flervåningshus, skulle man kunna använda algoritmen:
 
-bygg ett hus 
-gå upp ett steg
-bygg ett hus 
-gå upp ett steg
-bygg ett hus 
-o.s.v. För ett trevåningshus skulle sådan kod kunna se ut så här:
+1. bygg ett hus 
+1. gå upp ett steg
+1. bygg ett hus 
+1. gå upp ett steg
+1. bygg ett hus 
 
-var Drone = require('../drone/drone').Drone;
+osv. För ett trevåningshus skulle sådan kod kunna se ut så här:
+```javascript
+var Drone = require('drone');
 
 function mitthus(s) {
     if ( s < 3 ) {
-        this.sign(['Huset skall','vara minst', '3*3 block stort'], 63);
+        this.sign(['Huset ska','vara minst', '3*3 block stort'], 63);
     } else {
         this.box('41', s, 1, s).up().box('20', s, 2, s).up(2).box('152', s, 1, s);
         this.up();
@@ -233,20 +262,30 @@ function mitthus(s) {
 }
 
 Drone.extend('mitthus', mitthus);
-Istället för att skriva samma kod tre gånger, kan man göra en loop. Ett sätt att göra en loop är att skriva en så kallad for-sats. En for-sats kan se ut på många olika sätt men en enkel princip är att använda koden:
+```
 
+Istället för att skriva samma kod tre gånger, kan man göra en loop, slinga.
+Ett sätt att göra en loop är att skriva en så kallad *for*-sats.
+En *for*-sats kan se ut på många olika sätt men en
+enkel princip är att använda den här mallen:
+
+```javascript
 for (var i = 0; i < antalUpprepningar; i += 1) {
     //kod som skall upprepas 
 }
-antalUpprepningar är antingen ett tal skrivet som en siffra, eller ett tal som är lagrat i en variabel eller parameter.
+```
 
-En for-sats som bygger ett hus tre gånger ser ut som i koden nedan:
+*antalUpprepningar* är antingen ett tal skrivet som en siffra,
+eller ett tal som är lagrat i en variabel eller parameter.
 
-var Drone = require('../drone/drone').Drone;
+En *for*-sats som bygger ett hus tre gånger ser ut som i koden nedan:
+
+```javascript
+var Drone = require('drone');
 
 function mitthus(s) {
     if ( s < 3 ) {
-        this.sign(['Huset skall','vara minst', '3*3 block stort'], 63);
+        this.sign(['Huset ska','vara minst', '3*3 block stort'], 63);
     } else {
         for (var i = 0; i < 3; i += 1) {
             this.box('41', s, 1, s).up().box('20', s, 2, s).up(2).box('152', s, 1, s);
@@ -256,15 +295,22 @@ function mitthus(s) {
 }
 
 Drone.extend('mitthus', mitthus);
-Raderna innanför for-satsens måsvingar körs tre gånger. Första gången är variabeln i=0, andra gången är i=1, tredje gången är i=2; därefter räknas i upp till 3 och loopen avslutas eftersom i inte längre är mindre än 3.
+```
 
-Du kan också införa ännu en parameter för att låta användaren ange antal våningar. I koden nedan kallas denna parameter för n och for-satsen utförs n gånger.
+Raderna innanför *for*-satsens måsvingar körs tre gånger.
+Första gången är variabeln *i*=0, andra gången är *i*=1, tredje gången är *i*=2; 
+därefter räknas *i* upp till 3 och loopen avslutas eftersom *i* inte längre är
+mindre än 3.
 
-var Drone = require('../drone/drone').Drone;
+Du kan också införa ännu en parameter för att låta användaren ange antal våningar.
+I koden nedan kallas denna parameter för *n* och *for*-satsen utförs *n* gånger.
+
+```javascript
+var Drone = require('drone');
 
 function mitthus(s, n) {
     if ( s < 3 ) {
-        this.sign(['Huset skall','vara minst', '3*3 block stort'], 63);
+        this.sign(['Huset ska','vara minst', '3*3 block stort'], 63);
     } else {
         for (var i = 0; i < n; i += 1) {
             this.box('41', s, 1, s).up().box('20', s, 2, s).up(2).box('152', s, 1, s);
@@ -274,16 +320,18 @@ function mitthus(s, n) {
 }
 
 Drone.extend('mitthus', mitthus);
-Provkör koden inifrån Minecraft:
+```
 
-/js mitthus(20, 4)
+Provkör koden inifrån Minecraft: ```/js mitthus(20, 4)```
+
 Felmeddelande
 Höghus
-Gör egna hus,
+## Gör egna hus ...
 
-eller tunnlar, eller järnvägar, eller villa-kvarter, eller...
+... eller tunnlar, eller järnvägar, eller villa-kvarter, eller ...
 
-För mer information (på engelska) om drönaren, se ScriptCraft/API - Drone Plugin.
+För mer information (på engelska) om drönaren, se 
+[ScriptCraft/API &ndash; Drone Plugin](https://github.com/walterhiggins/ScriptCraft/blob/master/docs/API-Reference.md#drone-plugin).
 
-Minecraft fraktaler
+Minecraft-fraktaler
 Minecraft-fraktaler programmerade med ScriptCraft
