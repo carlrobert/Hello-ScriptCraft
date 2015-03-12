@@ -333,3 +333,6 @@ För mer information (på engelska) om drönaren, se
 ![Minecraft-fraktaler](https://cloud.githubusercontent.com/assets/4598641/6622112/db20e9e0-c8da-11e4-9420-fd320e4919a2.gif)
 
 [Minecraft-fraktaler](https://github.com/malinc/MinecraftFractals) programmerade med ScriptCraft
+
+*Baserad på https://github.com/malinc/Modda-Minecraft-med-Scriptcraft*
+
