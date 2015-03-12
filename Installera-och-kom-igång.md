@@ -227,7 +227,7 @@ Prova några av programmen genom att skriva:
 /js rainbow(30)
 /js maze(5, 7)
 /js dancefloor(10, 8)
-```javascript
+```
 
 Öppna något av programmen i texteditorn och betrakta koden!
 
