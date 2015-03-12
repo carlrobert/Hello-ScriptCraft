@@ -232,4 +232,4 @@ Prova några av programmen genom att skriva:
 
 Öppna något av programmen i texteditorn och betrakta koden!
 
-Om du vill göra ett längre program själv, måste du skriva det i texteditorn, spara filen, och sedan köra programmet inifrån Minecraft. Se nästa sida, Programmera drönaren!,för mer information.
+Om du vill göra ett längre program själv, måste du skriva det i texteditorn, spara filen, och sedan köra programmet inifrån Minecraft. Se nästa sida, Programmera drönaren!, för mer information.
