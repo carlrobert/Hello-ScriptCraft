@@ -151,68 +151,84 @@ Starta servern genom att dubbelklicka på *start_server.command*.
 
 ###Windows
 
-Öppna Notepad++ (eller en annan texteditor) och klistra in följande kod.
+Öppna Notepad++ eller en annan texteditor och klistra in följande kod.
+```javascript
+java -jar CanaryMod-1.2.0.jar gui -o true -Xmx1024M -Djline.terminal=jline.UnsupportedTerminal
+pause
+```
+Om din serverfil inte heter CanaryMod-1.2.0.jar
+så byt ut filnamnet till rätt filnamn.
 
-java -Xmx1024M -jar CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar -o true
-PAUSE
-Om din serverfil inte heter CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar så byt ut filnamnet (den gröna texten) till rätt filnamn.
+Spara filen som *run.bat* i mappen MinecraftServer.
 
-Spara filen som run.bat i mappen MinecraftServer.
+Starta servern genom att dubbelklicka på *run.bat*.
 
-Starta servern genom att dubbelklicka på run.bat.
+##Testa servern i Minecraft
 
-Testa servern i Minecraft
+1. Starta servern.
+1. Gör dig själv till serveroperatör genom att skriva *op spelarnamn* i konsollen.
+Ordet spelarnamn skall bytas mot ditt eget spelarnamn i Minecraft.
+1. Starta Minecraft.
+1. Välj rätt version av Minecraft.
+  1. Om server-filen heter CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar så är den gjord för version 1.7.10.
+  1. Välj Edit Profile i Minecraft och välj sedan en version som passar servern efter Use version.
+  1. Spara profilen.
+1. Klicka på Play och välj Multiplayer.
+1. Klicka på Add server.
+1. Välj ett servernamn vilket som helst och skriv in localhost under Server Address.
+1. Börja spela på den nya servern.
+1. Klicka på t för att få upp en textrad som man kan skriva på. Skriv
+*/js 1+1*
+1. Om svaret *2.0* dyker upp så har du lyckats köra din första Javascript-kod i Minecraft!
 
-Starta servern.
-Gör dig själv till "server operatör" genom att skriva op spelarnamn i konsolen. Ordet spelarnamn skall bytas till ditt eget spelarnamn i Minecraft.
-Starta Minecraft.
-Välj rätt version av Minecraft.
-Om server-filen heter CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar så är den gjord för version 1.7.10.
-Välj Edit Profile i Minecraft och välj sedan en version som passar servern efter Use version.
-Spara profilen.
-Klicka på Play och välj Multiplayer.
-Klicka på Add server.
-Välj ett servernamn vilket som helst och skriv in localhost under Server Address.
-Börja spela på den nya servern.
-Klicka på t för att få upp en textrad som man kan skriva på. Skriv in
-/js 1+1
-Om talet 2.0 dyker upp så har du lyckats köra din första Javascript-kod i Minecraft!
-Några enkla byggkommandon
+## Några enkla byggkommandon
 
-Alla byggblock i Minecraft har ett id-nummer. På sidan Minecraft ID List finns en fullständig lista. Exempelvis har guld id-nummer 41 och röd ull id-nummer 35:14.
+Alla byggblock i Minecraft har ett id-nummer. På sidan [Minecraft ID List](http://minecraft-ids.grahamedgecombe.com/) finns en fullständig lista. Exempelvis har guld id-nummer 41 och röd ull id-nummer 35:14.
 
 Prova att skriva in kommandona:
 
+```javascript
 /js box('41')
 /js box('35:14')
-Ett rätblock har en bredd, ett djup och en höjd. Gör ett rätblock genom att skriva kommandot:
+```
 
-/js box('41', 3, 5, 10)
+Ett rätblock har en bredd, ett djup och en höjd. Gör ett rätblock genom att skriva kommandot:
+```/js box('41', 3, 5, 10)```
 Hur gör man ett rätblock av röd ull som är 2 block bred, 100 block hög och 1 block djupt? Testa dig fram!
 
-Pelare av röd ull
-Pelare av röd ull
+FIXA: Pelare av röd ull
+
 Det finns även kommandon för att göra cylindrar. Prova kommandona:
 
+```javascript
 /js cylinder('41', 3, 5)
 /js cylinder0('41', 5, 3)
+```
+
 Du kan återanvända kommandon som du skrivit. När textraden visas trycker du på pil upp eller pil ned för att se gamla kommandon. Sedan kan du förflytta dig längs ett kommando med hjälp av högerpil och vänsterpil.
 
 Hur gör man en ihålig guldcylinder som har radien 10 och höjden 2?
 
-Guldcylindrar
-Guldcylindrar i skymningen
+FIXA: Guldcylindrar i skymningen
 Om man vill göra tak till hus kan man använda sig av ett prisma. Prova kommandona:
 
+```javascript
 /js prism('35:14', 6, 10)
 /js prism0('35:14', 15, 5)
-Färdiga program
+```javascript
 
-I mappen CraftBukkit/plugins/scriptcraft/plugins/drone/contrib finns exempelprogram som olika användare gjort. Prova några av programmen genom att skriva:
+###Färdiga program
 
+I mappen *CanaryMod/plugins/scriptcraft/plugins/drone/contrib*
+finns exempelprogram som olika användare gjort. 
+Prova några av programmen genom att skriva:
+
+```javascript
 /js rainbow(30)
 /js maze(5, 7)
 /js dancefloor(10, 8)
+```javascript
+
 Öppna något av programmen i texteditorn och betrakta koden!
 
-Om du vill göra ett längre program själv, måste du skriva det i texteditorn, spara filen, och sedan köra programmet inifrån Minecraft. Se nästa sida Programmera drönaren! för mer information.
+Om du vill göra ett längre program själv, måste du skriva det i texteditorn, spara filen, och sedan köra programmet inifrån Minecraft. Se nästa sida, Programmera drönaren!,för mer information.
