@@ -234,4 +234,4 @@ Prova några av programmen genom att skriva:
 
 Om du vill göra ett längre program själv, måste du skriva det i texteditorn, spara filen, och sedan köra programmet inifrån Minecraft. Se nästa sida, Programmera drönaren!, för mer information.
 
-*Based on from https://github.com/malinc/Modda-Minecraft-med-Scriptcraft*
+*Baserad på https://github.com/malinc/Modda-Minecraft-med-Scriptcraft*
