@@ -95,8 +95,7 @@ Det som står efter *//* är så kallade kommentarer. Kommentarer är till för 
 
 Provkör programmet i Minecraft!
 
-Mitt hus
-Mitt hus
+![Mitt hus](https://cloud.githubusercontent.com/assets/4598641/6622114/db2140f2-c8da-11e4-9f70-5aad04526513.png)
 
 ###Gör en variabel
 
@@ -147,8 +146,7 @@ Drone.extend('mitthus', mitthus);
 Kör koden inifrån Minecraft genom att exempelvis skriva 
 ```/js mitthus(7)```
 
-Flera hus
-Olika stora hus
+![Olika stora hus](https://cloud.githubusercontent.com/assets/4598641/6622111/db2075be-c8da-11e4-97ba-46a9edda3153.png)
 
 ###Kedja ihop byggkommandona
 
@@ -230,8 +228,7 @@ Drone.extend('mitthus', mitthus);
 
 Provkör: ```/js mitthus(2)```
 
-Felmeddelande
-Felmeddelande
+![Felmeddelande](https://cloud.githubusercontent.com/assets/4598641/6622113/db2110a0-c8da-11e4-8e34-3d0f6432da34.png)
 
 För mer information (på engelska) om skyltar se [Drone.sign()](https://github.com/walterhiggins/ScriptCraft/blob/master/docs/API-Reference.md#dronesign-method).
 
@@ -324,8 +321,8 @@ Drone.extend('mitthus', mitthus);
 
 Provkör koden inifrån Minecraft: ```/js mitthus(20, 4)```
 
-Felmeddelande
-Höghus
+![Höghus](https://cloud.githubusercontent.com/assets/4598641/6622110/db1f913a-c8da-11e4-8eaa-0b0de9d55670.png)
+
 ## Gör egna hus ...
 
 ... eller tunnlar, eller järnvägar, eller villa-kvarter, eller ...
@@ -333,5 +330,6 @@ Höghus
 För mer information (på engelska) om drönaren, se 
 [ScriptCraft/API &ndash; Drone Plugin](https://github.com/walterhiggins/ScriptCraft/blob/master/docs/API-Reference.md#drone-plugin).
 
-Minecraft-fraktaler
-Minecraft-fraktaler programmerade med ScriptCraft
+![Minecraft-fraktaler](https://cloud.githubusercontent.com/assets/4598641/6622112/db20e9e0-c8da-11e4-9420-fd320e4919a2.gif)
+
+[Minecraft-fraktaler](https://github.com/malinc/MinecraftFractals) programmerade med ScriptCraft
