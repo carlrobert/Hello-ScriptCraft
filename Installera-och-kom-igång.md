@@ -215,7 +215,7 @@ Om man vill göra tak till hus kan man använda sig av ett prisma. Prova kommand
 ```javascript
 /js prism('35:14', 6, 10)
 /js prism0('35:14', 15, 5)
-```javascript
+```
 
 ###Färdiga program
 
