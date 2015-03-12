@@ -1,6 +1,6 @@
 #Programmera drönaren!
 
-För information om hur man installerar servern och ScriptCraft se föregående sida, *Installera och kom igång!*
+För information om hur man installerar servern och ScriptCraft se föregående sida, [Installera och kom igång](/Installera-och-kom-ig%C3%A5ng.md)
 
 I ScriptCraft kan man programmera en så kallad drönare (drone på engelska) till att bygga saker i Minecraft. Här beskrivs hur man programmerar drönaren.
 
