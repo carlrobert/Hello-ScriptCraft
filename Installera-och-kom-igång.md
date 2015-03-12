@@ -15,7 +15,7 @@ När man skriver kod använder man inte vanliga ordbehandlare (som exempelvis Wo
 
 För att kunna modda Minecraft måste du ha ett Minecraft-konto. All annan programvara som behövs är gratis.
 
-För några enkla programmeringsexempel, se nästa sida: [Programmera drönaren!](http://www.malinc.se/programming/minecraft/programDrone.php)
+För några enkla programmeringsexempel, se nästa sida: [Programmera drönaren!](/Programmera-dr%C3%B6naren.md)
 
 ##Ladda ner och installera en texteditor
 
