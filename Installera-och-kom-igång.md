@@ -196,7 +196,7 @@ Ett rätblock har en bredd, ett djup och en höjd. Gör ett rätblock genom att 
 ```/js box('41', 3, 5, 10)```
 Hur gör man ett rätblock av röd ull som är 2 block bred, 100 block hög och 1 block djupt? Testa dig fram!
 
-FIXA: Pelare av röd ull
+![Pelare av röd ull](https://cloud.githubusercontent.com/assets/4598641/6613915/90f4effc-c893-11e4-8a4b-d69aed0158ef.png)
 
 Det finns även kommandon för att göra cylindrar. Prova kommandona:
 
@@ -209,7 +209,8 @@ Du kan återanvända kommandon som du skrivit. När textraden visas trycker du p
 
 Hur gör man en ihålig guldcylinder som har radien 10 och höjden 2?
 
-FIXA: Guldcylindrar i skymningen
+![Guldcylindrar i skymningen](https://cloud.githubusercontent.com/assets/4598641/6613916/90f59cc2-c893-11e4-9781-c335e7e590d0.png)
+
 Om man vill göra tak till hus kan man använda sig av ett prisma. Prova kommandona:
 
 ```javascript
