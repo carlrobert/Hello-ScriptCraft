@@ -19,17 +19,13 @@ För några enkla programmeringsexempel, se nästa sida: [Programmera drönaren!
 
 ##Ladda ner och installera en texteditor
 
-###Linux
+* **Kör du Windows?** 
+Ladda ner och installera [Notepad++](http://notepad-plus-plus.org/).
 
-Använd exempelvis *gedit* vilket är förinstallerat på många Linux-distributioner.
-
-###Mac
-
+* **Kör du OS X (Mac)?**
 Ladda ner och installera [Sublime Text](http://www.sublimetext.com/).
 
-###Windows
-
-Ladda ner och installera [Notepad++](http://notepad-plus-plus.org/).
+* **Kör du Linux?** Använd exempelvis *gedit* som följer med många Linux-distributioner.
 
 ##Java
 
