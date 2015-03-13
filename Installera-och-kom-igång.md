@@ -38,7 +38,7 @@ När man skriver kod använder man inte vanliga ordbehandlare (som exempelvis Wo
 
 ##Java
 
-Om du inte redan har Java installerat så [installera det](http://www.java.com/sv/)!
+Om du inte redan har Java installerat så [installera det](http://www.java.com/sv/)! Kör du Windows eller Linux så fortsätt till [Sätt upp servern](#sätt-upp-servern)
 
 ###Java-versioner på Mac
 
@@ -72,11 +72,11 @@ Testa sedan att skriva in ```java -version``` igen. Nu bör svaret bli den senas
 ##Sätt upp servern
 
 Gör en mapp *MinecraftServer* på något lämpligt ställe. 
-Ladda ner den rekommenderad versionen av Canarymod 
-[härifrån](https://ci.visualillusionsent.net/job/CanaryMod/599/artifact/target/CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar) och lägg den i mappen *MinecraftServer*.
+Ladda ner den rekommenderade versionen av Canarymod, 1.2.0 för Minecraft 1.8, 
+[härifrån](http://canarymod.net/releases) och lägg den i mappen *MinecraftServer*.
 
 Öppna terminalen (Mac/Linux) eller DOS-fönstret (Windows).
-Gå till mappen MinecraftServer genom att använda kommandot *cd* (change directory).
+Gå till mappen *MinecraftServer* genom att använda kommandot *cd* (change directory).
 
 *Man går in en mapp med namnet *EnMapp* genom att skriva *cd EnMapp*.
 *Man går tillbaka (upp ett steg i filhierarkin) genom att skriva *cd ..*
@@ -86,7 +86,7 @@ Gå till mappen MinecraftServer genom att använda kommandot *cd* (change direct
 När du befinner dig i mappen *MinecraftServer*, skriv:
 
 ```
-java -Xmx1024M -jar CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar -o true
+java -Xmx1024M -jar CanaryMod-1.2.0.jar -o true
 ```
 
 Första gången du kör detta kommandon skapas ett antal mappar och filer. 
@@ -106,7 +106,7 @@ och placera den *MinecraftServer/plugins*. Kör kommandot igen:
 java -Xmx1024M -jar CanaryMod-1.2.0.jar -o true
 ```
 
-Nu startar servern och det görs en ny mapp *scriptcraft* i mappen MinecraftServer.
+Nu startar servern och det görs en ny mapp *scriptcraft* i mappen *MinecraftServer*.
 
 Avsluta servern genom att skriva *stop*.
 Avsluta alltid servern på detta vis, annars kan du skada din Minecraftvärld.
@@ -115,15 +115,48 @@ Avsluta alltid servern på detta vis, annars kan du skada din Minecraftvärld.
 
 För att på ett enkelt sätt kunna starta servern behöver du ett startscript.
 
+###Windows
+
+Öppna Notepad++ eller en annan texteditor och klistra in följande kod.
+```
+java -jar CanaryMod-1.2.0.jar gui -o true -Xmx1024M -Djline.terminal=jline.UnsupportedTerminal
+pause
+```
+Om din serverfil inte heter CanaryMod-1.2.0.jar
+så byt ut filnamnet till rätt filnamn.
+
+Spara filen som *run.bat* i mappen MinecraftServer.
+
+Starta servern genom att dubbelklicka på *run.bat*. Fortsätt sedan att [testa servern i Minecraft](###testa-servern-i-Minecraft).
+
+###OS X (Mac)
+
+Öppna Sublime Text (eller en annan texteditor) och klistra in följande kod.
+
+```bash
+#!/bin/bash
+cd "$( dirname "$0" )"
+java -jar CanaryMod-1.2.0.jar gui -o true -Xmx1024M -Djline.terminal=jline.UnsupportedTerminal
+```
+
+Om din serverfil inte heter *CanaryMod-1.2.0.jar* så byt ut filnamnet (den gröna texten) till rätt filnamn.
+
+Spara filen som *start_server.command* i mappen *MinecraftServer*.
+
+Ändra behörigheten på startscriptet så att det blir körbart. 
+Skriv in följande kommando i terminalen: ```chmod a+x start_server.command```
+
+Starta servern genom att dubbelklicka på *start_server.command*. Fortsätt sedan att [testa servern i Minecraft](###testa-servern-i-Minecraft).
+
 ###Linux
 
 Öppna *gedit* (eller en annan texteditor) och klistra in följande kod:
 
-```
+```bash
 #!/bin/sh
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
-java -Xmx1024M -jar CanaryMod-1.2.0.jar -o true
+java -jar CanaryMod-1.2.0.jar gui -o true -Xmx1024M -Djline.terminal=jline.UnsupportedTerminal
 ```
 
 Om din serverfil inte heter CanaryMod-1.2.0.jar så byt ut filnamnet (den gröna texten) till rätt filnamn.
@@ -134,39 +167,6 @@ Spara filen som *start_server.sh* i mappen *MinecraftServer*.
 Skriv in följande kommando i terminalen: *chmod +x start_server.sh*
 
 Starta servern genom att skriva *server.sh* i terminalen.
-
-###Mac
-
-Öppna Sublime Text (eller en annan texteditor) och klistra in följande kod.
-
-```
-#!/bin/bash
-cd "$( dirname "$0" )"
-java -Xmx1024M -jar CanaryMod-1.2.0.jar -o true
-```
-
-Om din serverfil inte heter *CanaryMod-1.2.0.jar* så byt ut filnamnet (den gröna texten) till rätt filnamn.
-
-Spara filen som *start_server.command* i mappen *MinecraftServer*.
-
-Ändra behörigheten på startscriptet så att det blir körbart. 
-Skriv in följande kommando i terminalen: ```chmod a+x start_server.command```
-
-Starta servern genom att dubbelklicka på *start_server.command*.
-
-###Windows
-
-Öppna Notepad++ eller en annan texteditor och klistra in följande kod.
-```javascript
-java -jar CanaryMod-1.2.0.jar gui -o true -Xmx1024M -Djline.terminal=jline.UnsupportedTerminal
-pause
-```
-Om din serverfil inte heter CanaryMod-1.2.0.jar
-så byt ut filnamnet till rätt filnamn.
-
-Spara filen som *run.bat* i mappen MinecraftServer.
-
-Starta servern genom att dubbelklicka på *run.bat*.
 
 ##Testa servern i Minecraft
 
