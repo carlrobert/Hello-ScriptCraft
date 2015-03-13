@@ -127,7 +127,7 @@ så byt ut filnamnet till rätt filnamn.
 
 Spara filen som *run.bat* i mappen MinecraftServer.
 
-Starta servern genom att dubbelklicka på *run.bat*. Fortsätt sedan att [testa servern i Minecraft](#testa-servern-i-Minecraft).
+Starta servern genom att dubbelklicka på *run.bat*. Fortsätt sedan att [testa servern i Minecraft](#testa-servern-i-minecraft).
 
 ###OS X (Mac)
 
@@ -146,7 +146,7 @@ Spara filen som *start_server.command* i mappen *MinecraftServer*.
 Ändra behörigheten på startscriptet så att det blir körbart. 
 Skriv in följande kommando i terminalen: ```chmod a+x start_server.command```
 
-Starta servern genom att dubbelklicka på *start_server.command*. Fortsätt sedan att [testa servern i Minecraft](#testa-servern-i-Minecraft).
+Starta servern genom att dubbelklicka på *start_server.command*. Fortsätt sedan att [testa servern i Minecraft](#testa-servern-i-minecraft).
 
 ###Linux
 
