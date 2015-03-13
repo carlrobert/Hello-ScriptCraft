@@ -17,13 +17,12 @@ För några enkla programmeringsexempel, se nästa sida: [Programmera drönaren!
 
 Här är sex steg för att komma igång. Resten av den här sidan hjälper dig med dem.
 
-1. Installera en texteditor
+1. [Installera en texteditor](Ladda ner och installera en texteditor)
 2. Installera Java
 3. Installera CanaryMod och ScriptCraft
 4. Gör ett startscript
 5. Testa servern i Minecraft
 6. Prova några enkla byggkommandon
-[test](#Ladda_ner_och_installera_en_texteditor)
 
 ##Ladda ner och installera en texteditor
 
