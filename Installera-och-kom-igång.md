@@ -23,7 +23,7 @@ Här är sex steg för att komma igång. Resten av den här sidan hjälper dig m
 4. Gör ett startscript
 5. Testa servern i Minecraft
 6. Prova några enkla byggkommandon
-
+[test](#Ladda_ner_och_installera_en_texteditor)
 
 ##Ladda ner och installera en texteditor
 
