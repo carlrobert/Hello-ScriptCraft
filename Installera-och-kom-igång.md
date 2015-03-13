@@ -122,12 +122,12 @@ För att på ett enkelt sätt kunna starta servern behöver du ett startscript.
 java -jar CanaryMod-1.2.0.jar gui -o true -Xmx1024M -Djline.terminal=jline.UnsupportedTerminal
 pause
 ```
-Om din serverfil inte heter CanaryMod-1.2.0.jar
+Om din serverfil inte heter *CanaryMod-1.2.0.jar*
 så byt ut filnamnet till rätt filnamn.
 
 Spara filen som *run.bat* i mappen MinecraftServer.
 
-Starta servern genom att dubbelklicka på *run.bat*. Fortsätt sedan att [testa servern i Minecraft](###testa-servern-i-Minecraft).
+Starta servern genom att dubbelklicka på *run.bat*. Fortsätt sedan att [testa servern i Minecraft](#testa-servern-i-Minecraft).
 
 ###OS X (Mac)
 
@@ -146,7 +146,7 @@ Spara filen som *start_server.command* i mappen *MinecraftServer*.
 Ändra behörigheten på startscriptet så att det blir körbart. 
 Skriv in följande kommando i terminalen: ```chmod a+x start_server.command```
 
-Starta servern genom att dubbelklicka på *start_server.command*. Fortsätt sedan att [testa servern i Minecraft](###testa-servern-i-Minecraft).
+Starta servern genom att dubbelklicka på *start_server.command*. Fortsätt sedan att [testa servern i Minecraft](#testa-servern-i-Minecraft).
 
 ###Linux
 
@@ -159,7 +159,7 @@ cd "$BINDIR"
 java -jar CanaryMod-1.2.0.jar gui -o true -Xmx1024M -Djline.terminal=jline.UnsupportedTerminal
 ```
 
-Om din serverfil inte heter CanaryMod-1.2.0.jar så byt ut filnamnet (den gröna texten) till rätt filnamn.
+Om din serverfil inte heter *CanaryMod-1.2.0.jar* så byt ut filnamnet (den gröna texten) till rätt filnamn.
 
 Spara filen som *start_server.sh* i mappen *MinecraftServer*.
 
@@ -175,7 +175,6 @@ Starta servern genom att skriva *server.sh* i terminalen.
 Ordet spelarnamn skall bytas mot ditt eget spelarnamn i Minecraft.
 1. Starta Minecraft.
 1. Välj rätt version av Minecraft.
-  1. Om server-filen heter CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar så är den gjord för version 1.7.10.
   1. Välj Edit Profile i Minecraft och välj sedan en version som passar servern efter Use version.
   1. Spara profilen.
 1. Klicka på Play och välj Multiplayer.
