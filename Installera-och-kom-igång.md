@@ -17,7 +17,7 @@ För några enkla programmeringsexempel, se nästa sida: [Programmera drönaren!
 
 Här är sex steg för att komma igång. Resten av den här sidan hjälper dig med dem.
 
-1. [Installera en texteditor][]
+1. [Installera en texteditor](#installera en texteditor)
 2. Installera Java
 3. Installera CanaryMod och ScriptCraft
 4. Gör ett startscript
