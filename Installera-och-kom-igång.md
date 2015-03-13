@@ -11,8 +11,6 @@ ScriptCraft är gjord för att fungera med [CanaryMod](http://canarymod.net/).
 Det finns instruktioner på engelska för installering av [ScriptCraft](http://scriptcraftjs.org/).
 Det här en sammanfattning på svenska.
 
-När man skriver kod använder man inte vanliga ordbehandlare (som exempelvis Word) eftersom ordbehandlare formaterar texten. Det finns speciella utvecklingsmiljöer gjorda för programmering som ofta är svåra att använda för nybörjare. Det finns också enklare texteditorer som inte är så avancerade men lättanvända. Här får du förslag på en texteditor som inte är allt för avancerad men funkar bra för programmering.
-
 För att kunna modda Minecraft måste du ha ett Minecraft-konto. All annan programvara som behövs är gratis.
 
 För några enkla programmeringsexempel, se nästa sida: [Programmera drönaren!](/Programmera-dr%C3%B6naren.md)
@@ -26,6 +24,8 @@ Ladda ner och installera [Notepad++](http://notepad-plus-plus.org/).
 Ladda ner och installera [Sublime Text](http://www.sublimetext.com/).
 
 * **Kör du Linux?** Använd exempelvis *gedit* som följer med många Linux-distributioner.
+
+När man skriver kod använder man inte vanliga ordbehandlare (som exempelvis Word) eftersom ordbehandlare formaterar texten. Det finns speciella utvecklingsmiljöer gjorda för programmering som ofta är svåra att använda för nybörjare. Det finns också enklare texteditorer som inte är så avancerade men lättanvända. Här får du förslag på en texteditor som inte är allt för avancerad men funkar bra för programmering.
 
 ##Java
 
