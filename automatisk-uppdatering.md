@@ -1,6 +1,6 @@
-#Uppdatera scriptcraft.jar automatiskt
+#Uppdatera *scriptcraft.jar* automatiskt
 
-Vårt mål: 
+Vårt mål för övningen: 
 
 1. Att ha ett litet program som automatiskt laddar ner senaste versionen av ScriptCraft, *scriptcraft.jar*
 1. Programmet ska ligga i Minecraft-serverns mapp.
@@ -22,19 +22,25 @@ https://github.com/walterhiggins/ScriptCraft/releases/tag/3.1.3/scriptcraft.jar
 För att komma vidare behöver vi ett sätt att kunna ladda ner *scriptcraft.jar*, alltså utan att vi behöver sitta och klicka 
 i webbläsaren.
 
-Ladda ner och installera programmet [curl](http://curl.haxx.se/download.html)
+Ladda ner och installera programmet [curl](http://curl.haxx.se/download.html) Till höger på sidan finns en innehållsförteckning där man lätt hittar till rätt nerladdning: Windows, Mac OS X, Linux.
 
-curl -o scriptcraft.jar https://github.com/walterhiggins/ScriptCraft/releases/download/3.1.3/scriptcraft.jar
+När du installerat ska du kunna köra kommandot
+```curl -o scriptcraft.jar https://github.com/walterhiggins/ScriptCraft/releases/download/3.1.3/scriptcraft.jar```
 
-Vi ser att scriptcraft.jar bara är 392 tecken och att det innehåller ett meddelande om omdirigering: "You are being redirected"
+Vi ser att *scriptcraft.jar* bara är 392 tecken och att det innehåller ett meddelande om omdirigering: *You are being redirected*
 
-curl:s *location*-flagga kan hjälpa oss med detta så vi testar.
+Vi läser på litet mer på hjälpsidan för *curl* och
+testar om curl:s *location*-flagga kan hjälpa oss att följa omdirigeringen.
 
+```bash
 curl -o scriptcraft.jar --location https://github.com/walterhiggins/ScriptCraft/releases/download/3.1.3/scriptcraft.jar
+```
 
-Nu ser det bättre ut. Vi kan öppna scriptcraft.jar t.ex. med 7-zip och se att den innehåller filer.
+Nu ser det bättre ut. Vi kan öppna *scriptcraft.jar* t.ex. med [7-ZIP](http://www.7-zip.org/download.html) och se att den innehåller något som ser ut som ScriptCrafts filer.
 
-Installera curl.
+##Sätt ihop bitarna till ett uppdateringskommando
 
 Vi kan nu spara vårt nerladdningskommando för framtiden. Lägg det i en .bat-fil (Windows) eller .sh-fil (OS X/Linux).
+
+Kan det hantera nerladdningsfel?
 
