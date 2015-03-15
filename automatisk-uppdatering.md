@@ -1,4 +1,4 @@
-#Uppdatera *scriptcraft.jar* automatiskt
+#Ladda ner senaste ScriptCraft automatiskt (laboration)
 
 Vårt mål för övningen: 
 
@@ -25,15 +25,15 @@ i webbläsaren.
 Ladda ner och installera programmet [curl](http://curl.haxx.se/download.html) Till höger på sidan finns en innehållsförteckning där man lätt hittar till rätt nerladdning: Windows, Mac OS X, Linux.
 
 När du installerat ska du kunna köra kommandot
-```curl -o scriptcraft.jar https://github.com/walterhiggins/ScriptCraft/releases/download/3.1.3/scriptcraft.jar```
+```curl --remote-name https://github.com/walterhiggins/ScriptCraft/releases/download/3.1.3/scriptcraft.jar```
 
 Vi ser att *scriptcraft.jar* bara är 392 tecken och att det innehåller ett meddelande om omdirigering: *You are being redirected*
 
 Vi läser på litet mer på hjälpsidan för *curl* och
-testar om curl:s *location*-flagga kan hjälpa oss att följa omdirigeringen.
+testar om curl:s *location*-flagga kan hjälpa oss att följa omdirigeringen. När vi följer länken via vår webbläsare så är det webbläsaren som följer omdirigeringen automatiskt men när vi använder *curl* måste vi tala om att det är så vi vill ha det.
 
 ```bash
-curl -o scriptcraft.jar --location https://github.com/walterhiggins/ScriptCraft/releases/download/3.1.3/scriptcraft.jar
+curl --remote-name --location https://github.com/walterhiggins/ScriptCraft/releases/download/3.1.3/scriptcraft.jar
 ```
 
 Nu ser det bättre ut. Vi kan öppna *scriptcraft.jar* t.ex. med [7-ZIP](http://www.7-zip.org/download.html) och se att den innehåller något som ser ut som ScriptCrafts filer.
