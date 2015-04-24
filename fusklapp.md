@@ -10,7 +10,7 @@ prism(material, bredd, längd)
 prism0(material, bredd, längd)
 cylinder(material, radie, höjd)
 cylinder0(material, radie, höjd)
-sign([textrad1, textrad2], 63)
+signpost([textrad1, textrad2])
 ```
 När man kör kommandon skall `material` bytas ut mot ett Minecraft-material. 
 `bredd`, `höjd`, `djup`, `längd` och `radie` ska bytas ut mot siffror. 
@@ -20,7 +20,7 @@ Exempel på hur man kör:
 /js box('41', 4, 7, 3)
 /js prism('35:14', 6, 10)
 /js cylinder(blocks.oak, 10, 2)
-/js sign(['Hello', 'World!'], 63)
+/js signpost(['Hello', 'World!'])
 ```
 Exempel på hur man kör program som andra användare gjort:
 ```javascript
