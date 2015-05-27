@@ -37,9 +37,9 @@ function power_rail_up(drone, block_type, length) {
 }
 ```
 
-Nu ska vi koppla en funktion till ScriptCraft som bygger upp vår berg- och dalbana. Det kan man göra genom att koppla en funktion på en inbyggd variabel i ScriptCraft som heter ```exports```. Funktioner som är kopplade till exports kan man sedan anropa i Minecraft genom att öppna  chattfönstret och skriva ```/js rollercoaster()```.
+Nu ska vi koppla en funktion till ScriptCraft som bygger upp vår berg- och dalbana. Det kan man göra genom att koppla en funktion till en inbyggd variabel i ScriptCraft som heter `exports`. Funktioner som är kopplade till `exports` kan man sedan anropa i Minecraft genom att öppna chattfönstret och skriva `/js rollercoaster()`.
 
-Börja med att skriva en tom funktion, och fyll sedan på med det som står längre ner.
+Börja med att skriva en tom funktion och fyll sedan på med det som står längre ner.
 
 ```javascript
 exports.rollercoaster = function() {
@@ -51,10 +51,10 @@ Här är hela rollercoaster-funktionen, skriv lite i taget och provkör i Minecr
 
 ```javascript
 exports.rollercoaster = function() {
-  var drone = new Drone(); // Skapar en ny drone, en drone är ett osynlig flygande objekt i ScriptCraft som sätter ut block
-  drone.fwd(5); // Går 5 steg framåt med drone
+  var drone = new Drone(); // Skapar en ny drönare, en ett osynligt flygande objekt i ScriptCraft som sätter ut block
+  drone.fwd(5); // Går 5 steg framåt med drönaren
  
-  rail_fwd(drone, blocks.stone, 1); // Säger åt dronen att skapa ett sten-block med en räls på
+  rail_fwd(drone, blocks.stone, 1); // Säger åt drönaren att skapa ett stenblock med en räls på
  
   // En loop (känner du igen den från scratch?) som skapar en backe med power rails
   for (var i = 0; i < 36; i++) {
@@ -63,7 +63,7 @@ exports.rollercoaster = function() {
  
   rail_fwd(drone, blocks.stone, 1);
  
-  drone.turn(); // Svänger dronen åt höger
+  drone.turn(); // Svänger drönaren åt höger
   rail_fwd(drone, blocks.stone, 1);
  
   // En loop som gör en backe som man kommer åka ut för
@@ -116,7 +116,8 @@ exports.rollercoaster = function() {
 }
 ```
 
-Kan du göra en coolare berg- och dalbana än mig?
-Värt att nämna är att man bör vara vänd norrut när man anropar skriptet, annars flyger man ur i mitten någonstans när man åker.
+# Utmaningar!
+1. Kan du göra en coolare berg- och dalbana än mig?
+1. Värt att nämna är att man bör vara vänd norrut när man anropar skriptet, annars flyger man ur i mitten någonstans när man åker. Kan du förbättra programmet så att vi slipper det problemet?
 
 [Originalet hittas på CoderDojo Växjös hemsida](http://vaxjo.coderdojo.se/experiment/scriptcraft-rollercoaster/)
