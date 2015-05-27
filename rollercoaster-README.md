@@ -8,6 +8,9 @@ Skapa en mapp med ditt namn i <code>craftbukkit/plugins/scriptcraft/plugins/</co
 
 I den här filen börjar vi med att göra fyra funktioner. Tre för att göra vanliga block med en räls på, en som går uppåt, en framåt och en nedåt. Den sista gör ett block med en power rail på och en redstone torch som sätter igång powerrailen.
 
+1. *FIXA: Skriv om med Drone.extend() så blir det mer idiomatiskt*
+1. *FIXA: Beskriv hur man testar en funktion i taget från chatten*
+
 ```javascript
 function rail_up(drone, block_type, length) {
   drone.box(block_type, 1, 1, length);
@@ -51,7 +54,7 @@ Här är hela rollercoaster-funktionen, skriv lite i taget och provkör i Minecr
 
 ```javascript
 exports.rollercoaster = function() {
-  var drone = new Drone(); // Skapar en ny drönare, en ett osynligt flygande objekt i ScriptCraft som sätter ut block
+  var drone = new Drone(); // Skapar en ny drönare, ett osynligt flygande objekt i ScriptCraft som sätter ut block
   drone.fwd(5); // Går 5 steg framåt med drönaren
  
   rail_fwd(drone, blocks.stone, 1); // Säger åt drönaren att skapa ett stenblock med en räls på
