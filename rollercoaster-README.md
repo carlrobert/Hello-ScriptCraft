@@ -118,3 +118,5 @@ exports.rollercoaster = function() {
 
 Kan du göra en coolare berg- och dalbana än mig?
 Värt att nämna är att man bör vara vänd norrut när man anropar skriptet, annars flyger man ur i mitten någonstans när man åker.
+
+[Originalet hittas på CoderDojo Växjös hemsida](http://vaxjo.coderdojo.se/experiment/scriptcraft-rollercoaster/)
