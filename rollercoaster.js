@@ -63,7 +63,7 @@ function rollercoaster() {
 
   // En slinga (känner du igen den från scratch?) som skapar en backe med power rails
   for (var i = 0; i < 36; i++) {
-    drone.power_rail_up(blocks.stone, 1).times(36);
+    drone.power_rail_up(blocks.stone, 1);
   }
  
   drone.rail_fwd(blocks.stone, 1);
