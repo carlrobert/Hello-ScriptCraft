@@ -8,8 +8,6 @@ Skapa en mapp med ditt namn i <code>craftbukkit/plugins/scriptcraft/plugins/</co
 
 I den här filen börjar vi med att göra fyra funktioner. Tre för att göra vanliga block med en räls på, en som går uppåt, en framåt och en nedåt. Den sista gör ett block med en power rail på och en redstone torch som sätter igång powerrailen.
 
-*FIXA: Beskriv hur man testar en funktion i taget från chatten*
-
 ```javascript
 var Drone = require('drone');
 
@@ -146,7 +144,6 @@ function rollercoaster() {
 
 Drone.extend(rollercoaster);
 ```
-
 # Utmaningar!
 1. Kan du göra en coolare berg- och dalbana än mig?
 1. Värt att nämna är att man bör vara vänd norrut när man anropar skriptet, annars flyger man ur i mitten någonstans när man åker. Kan du förbättra programmet så att vi slipper det problemet?
