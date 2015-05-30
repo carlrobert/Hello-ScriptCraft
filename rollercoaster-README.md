@@ -8,28 +8,49 @@ Skapa en mapp med ditt namn i <code>craftbukkit/plugins/scriptcraft/plugins/</co
 
 I den här filen börjar vi med att göra fyra funktioner. Tre för att göra vanliga block med en räls på, en som går uppåt, en framåt och en nedåt. Den sista gör ett block med en power rail på och en redstone torch som sätter igång powerrailen.
 
-1. *FIXA: Skriv om med Drone.extend() så blir det mer idiomatiskt*
-1. *FIXA: Beskriv hur man testar en funktion i taget från chatten*
+*FIXA: Beskriv hur man testar en funktion i taget från chatten*
 
 ```javascript
-function rail_up(drone, block_type, length) {
+var Drone = require('drone');
+
+function rail_up(block_type, length) {
+  var drone = this;
   drone.box(block_type, 1, 1, length);
   drone.up();
   drone.box(blocks.rail, 1, 1, length);
   drone.fwd(length);
 }
- 
-function rail_fwd(drone, block_type, length) {
-  rail_up(drone, block_type, length);
+
+Drone.extend(rail_up);
+```
+Spara din fil och skriv `/js refresh()` i chatten. Du kan nu testa koden så här långt. Skriv t.ex. `/js rail_up(blocks.stone, 5)` i chatten. Fungerar det?
+
+Lägg till `rail_fwd` och testa på samma sätt:
+```javascript
+function rail_fwd(block_type, length) {
+  var drone = this;
+  drone.rail_up(block_type, length);
   drone.down();
 }
- 
-function rail_down(drone, block_type, length) {
+
+Drone.extend(rail_fwd);
+```
+
+Lägg nu till `rail_down` och testa den sen:
+```javascript
+function rail_down(block_type, length) {
+  var drone = this;
   drone.down();
-  rail_fwd(drone, block_type, length);
+  drone.rail_fwd(block_type, length);
 }
- 
-function power_rail_up(drone, block_type, length) {
+
+Drone.extend(rail_down);
+```
+
+Och slutligen `power_rail_up`:
+```javascript
+function power_rail_up(block_type, length) {
+  var drone = this;
   drone.box(block_type, 1, 1, length);
   drone.down();
   drone.box(blocks.torch_redstone_active, 1, 1, 1);
@@ -38,85 +59,92 @@ function power_rail_up(drone, block_type, length) {
   drone.box(blocks.powered_rail, 1, 1, length);
   drone.fwd(length);
 }
+
+Drone.extend(power_rail_up);
 ```
 
-Nu ska vi koppla en funktion till ScriptCraft som bygger upp vår berg- och dalbana. Det kan man göra genom att koppla en funktion till en inbyggd variabel i ScriptCraft som heter `exports`. Funktioner som är kopplade till `exports` kan man sedan anropa i Minecraft genom att öppna chattfönstret och skriva `/js rollercoaster()`.
-
-Börja med att skriva en tom funktion och fyll sedan på med det som står längre ner.
+Nu ska vi koppla en funktion till ScriptCraft som bygger upp vår berg- och dalbana. Börja med att skriva en tom funktion och fyll sedan på med det som står längre ner.
 
 ```javascript
-exports.rollercoaster = function() {
- 
-}
+function rollercoaster() {
+  var drone = this, // Vi är en drönare, ett osynligt flygande föremål i ScriptCraft som sätter ut block
+    i;
+} 
+
+Drone.extend(rollercoaster);
 ```
 
-Här är hela rollercoaster-funktionen, skriv lite i taget och provkör i Minecraft! Det blir mycket roligare och lättare att förstå vad som händer Sådant som står efter ```//``` är kommentarer och inget du behöver skriva, men ibland hjälper det att komma ihåg vad man har gjort.
+Du kan testa att du gjort rätt så här långt genom att göra `/js refresh()` och sen `/js rollercoaster()`. Inget ska hända och inga felutskrifter ska dyka upp.
+
+Här är hela `rollercoaster`-funktionen. Skriv lite i taget och provkör i Minecraft! Det blir mycket roligare och lättare att förstå vad som händer Sådant som står efter `//` är kommentarer och inget du behöver skriva, men ibland hjälper det att komma ihåg vad man har gjort.
 
 ```javascript
-exports.rollercoaster = function() {
-  var drone = new Drone(); // Skapar en ny drönare, ett osynligt flygande objekt i ScriptCraft som sätter ut block
-  drone.fwd(5); // Går 5 steg framåt med drönaren
- 
-  rail_fwd(drone, blocks.stone, 1); // Säger åt drönaren att skapa ett stenblock med en räls på
- 
-  // En loop (känner du igen den från scratch?) som skapar en backe med power rails
-  for (var i = 0; i < 36; i++) {
-    power_rail_up(drone, blocks.stone, 1);
+function rollercoaster() {
+  var drone = this, // Vi är en drönare, ett osynligt flygande föremål i ScriptCraft som sätter ut block
+    i;
+
+  drone.fwd(5); // Drönaren går 5 steg framåt
+  drone.rail_fwd(blocks.stone, 1); // Säger åt drönaren att skapa ett stenblock med räls på
+
+  // En slinga (känner du igen den från scratch?) som skapar en backe med power rails
+  for (i = 0; i < 36; i++) {
+    drone.power_rail_up(blocks.stone, 1);
   }
  
-  rail_fwd(drone, blocks.stone, 1);
- 
-  drone.turn(); // Svänger drönaren åt höger
-  rail_fwd(drone, blocks.stone, 1);
- 
-  // En loop som gör en backe som man kommer åka ut för
-  for (var i = 0; i < 10; i++) {
-    rail_down(drone, blocks.stone, 1);
+  drone.rail_fwd(blocks.stone, 1);
+  drone.turn(); // Svänger dronen åt höger
+  drone.rail_fwd(blocks.stone, 1);
+
+  // En slinga som gör en utförsbacke
+  for (i = 0; i < 10; i++) {
+    drone.rail_down(blocks.stone, 1);
   }
  
-  rail_fwd(drone, blocks.stone, 1); // Kommer du ihåg vad denna gjorde?
+  drone.rail_fwd(blocks.stone, 1); // Kommer du ihåg vad denna gjorde?
  
   drone.turn();
-  rail_fwd(drone, blocks.stone, 10);
+  drone.rail_fwd(blocks.stone, 10);
  
   drone.turn();
-  rail_fwd(drone, blocks.stone, 2);
+  drone.rail_fwd(blocks.stone, 2);
  
-  // Ännu en backe neråt. Glöm inte bort att testa!
-  for (var i = 0; i < 15; i++) {
-    rail_down(drone, blocks.stone, 1);
-  } 
+  // Ännu en nerförsbacke. Glöm inte bort att testa!
+  for (i = 0; i < 15; i++) {
+    drone.rail_down(blocks.stone, 1);
+  }
  
-  rail_fwd(drone, blocks.stone, 2);
+  drone.rail_fwd(blocks.stone, 2);
   drone.back(); // Backar ett steg
-  drone.turn(3); // Svänger 3 steg (270 grader), det blir åt vänster i detta fallet
-  rail_fwd(drone, blocks.stone, 10);
+  drone.turn(3); // Svänger 3 steg (270 grader), åt vänster i detta fallet
+  drone.rail_fwd(blocks.stone, 10);
  
   drone.back();
   drone.turn(3);
   drone.fwd();
-  rail_fwd(drone, blocks.stone, 10);
+  drone.rail_fwd(blocks.stone, 10);
  
   drone.back();
   drone.turn();
   drone.fwd();
-  rail_fwd(drone, blocks.stone, 2);
-  for (var i = 0; i < 11; i++) {
-    rail_down(drone, blocks.stone, 1);
+  drone.rail_fwd(blocks.stone, 2);
+  for (i = 0; i < 11; i++) {
+    drone.rail_down(blocks.stone, 1);
   }
  
-  rail_fwd(drone, blocks.stone, 10);
+  drone.rail_fwd(blocks.stone, 10);
  
   drone.back();
   drone.turn();
   drone.fwd();
-  rail_fwd(drone, blocks.stone, 4);
+  drone.rail_fwd(blocks.stone, 4);
  
   drone.back();
   drone.turn();
   drone.fwd();
-  rail_fwd(drone, blocks.stone, 3);
-}
+  drone.rail_fwd(blocks.stone, 3);
+}; // rollercoaster
+
+Drone.extend(rollercoaster);
 ```
 
 # Utmaningar!
