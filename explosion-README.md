@@ -1,8 +1,9 @@
 # Explosioner där man tittar
 
-Håll i en "slimeball" och högerklicka. Vad händer?
+[Det här exemplet](https://github.com/carlrobert/Hello-ScriptCraft/blob/master/explosion.js) visar hur man kan använda muspekarens plats och spelarens siktlinje för att skapa effekter. Håll i en "slimeball" och högerklicka. Vad händer?
 
-![Koden](https://github.com/carlrobert/Hello-ScriptCraft/blob/master/explosion.js) visar hur man kan använda muspekarens plats och spelarens siktlinje för att skapa effekter.
+
+Kan du använda samma teknik för att få en mer elegant effekt?
 
 ![2015-09-28_19 59 19](https://cloud.githubusercontent.com/assets/4598641/10144272/0373b9d8-661d-11e5-99ae-5761cbce76eb.png)
 
