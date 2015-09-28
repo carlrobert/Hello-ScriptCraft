@@ -1,6 +1,6 @@
 # Explosioner där man tittar
 
-![2014-01-21_20 41 53-638x300](https://cloud.githubusercontent.com/assets/4598641/6439957/a7369d8c-c0d8-11e4-8420-7298200a9410.png)
+![2015-09-28_19 59 19](https://cloud.githubusercontent.com/assets/4598641/10144272/0373b9d8-661d-11e5-99ae-5761cbce76eb.png)
 
 Koden visar hur man kan använda muspekarens plats och spelarens siktlinje för att skapa effekter.
 
