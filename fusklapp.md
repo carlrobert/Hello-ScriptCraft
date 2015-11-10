@@ -22,6 +22,8 @@ Exempel på hur man kör:
 /js cylinder(blocks.oak, 10, 2)
 /js signpost(['Hello', 'World!'])
 ```
+Funkar det inte? Kolla att du använt raka citattecken, som sitter på samma knapp som asterisken (*) på svenska tangentbord.
+
 Exempel på hur man kör program som andra användare gjort:
 ```javascript
 /js rainbow(30) 
