@@ -86,7 +86,7 @@ Gå till mappen *MinecraftServer* genom att använda kommandot *cd* (change dire
 När du befinner dig i mappen *MinecraftServer*, skriv:
 
 ```
-java -Xmx1024M -jar spigot-n.n.n.jar -o true
+java -Xmx1024M -jar spigot-n.n.n.jar
 ```
 
 Första gången du kör detta kommandon skapas ett antal mappar och filer. 
@@ -103,7 +103,7 @@ Hämta senaste versionen av filen
 och placera den *MinecraftServer/plugins*. Kör kommandot igen:
 
 ```
-java -Xmx1024M -jar spigot-n.n.n.jar -o true
+java -Xmx1024M -jar spigot-n.n.n.jar
 ```
 
 Nu startar servern och det görs en ny mapp *scriptcraft* i mappen *MinecraftServer*.
@@ -119,8 +119,10 @@ För att på ett enkelt sätt kunna starta servern behöver du ett startscript.
 
 Öppna Notepad++ eller en annan texteditor och klistra in följande kod.
 ```
-java -jar spigot-n.n.n.jar -Xmx1024M
+:start
+java -Xmx1024M -jar spigot-1.8.8.jar
 pause
+goto :start
 ```
 Om din serverfil inte heter *spigot-n.n.n.jar*
 så byt ut filnamnet till rätt filnamn.
