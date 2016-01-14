@@ -39,7 +39,7 @@ function mitthus() {
 }
 Drone.extend('mitthus', mitthus);
 ```
-Gör en egen mapp, t.ex. `CanaryMod/Scriptcraft/plugins/Kalle`
+Gör en egen mapp, t.ex. `SpigotMC/Scriptcraft/plugins/Kalle`
 Spara filen som `mitthus.js` i din nya mapp. Kör ditt program inifrån Minecraft genom att skriva:
 ```javascript
 /js refresh()
