@@ -6,12 +6,12 @@ ScriptCraft är speciellt gjord för nybörjare och innehåller bland annat en s
 Drönaren används för att bygga saker i Minecraft och du programmerar själv vad drönaren skall bygga. 
 
 För att använda ScriptCraft måste du först sätta upp en egen server. 
-ScriptCraft är gjord för att fungera med [CanaryMod](http://canarymod.net/).
+ScriptCraft är gjort för att fungera med några olika Minecraft-servrar. Vi rekommenderar [SpigotMC](https://www.spigotmc.org/wiki/spigot-installation/) som bygger vidare på CraftBukkit.
 
-Det finns instruktioner på engelska för installering av [ScriptCraft](http://scriptcraftjs.org/).
+Det finns instruktioner på engelska för att installera [ScriptCraft](http://scriptcraftjs.org/).
 Det här en sammanfattning på svenska.
 
-För att kunna modda Minecraft måste du ha ett Minecraft-konto. All annan programvara som behövs är gratis.
+För att kunna modda Minecraft måste du ha ett Minecraft-konto. Alla andra program som behövs är gratis.
 
 För några enkla programmeringsexempel, se nästa sida: [Programmera drönaren!](/Programmera-dr%C3%B6naren.md)
 
@@ -19,7 +19,7 @@ Här är sex steg för att komma igång. Resten av den här sidan hjälper dig m
 
 1. [Installera en texteditor](#ladda-ner-och-installera-en-texteditor)
 2. [Installera Java](#java)
-3. [Installera CanaryMod och ScriptCraft](#sätt-upp-servern)
+3. [Installera SpigotMC och ScriptCraft](#sätt-upp-servern)
 4. [Gör ett startscript](#enklare-start-med-ett-startscript)
 5. [Testa servern i Minecraft](#testa-servern-i-Minecraft)
 6. [Prova några enkla byggkommandon](#några-enkla-byggkommandon)
@@ -67,26 +67,26 @@ Skriv sedan in:
 sudo ln -s '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java' /usr/bin/java
 ```
 
-Testa sedan att skriva in ```java -version``` igen. Nu bör svaret bli den senaste versionen. Om inget funkar, kolla in osx + [java 7 = painfully easy](https://gist.github.com/johan/10590467).
+Testa sedan att skriva in ```java -version``` igen. Nu bör svaret bli den senaste versionen. Om inget funkar, kolla in [osx + java 7 = painfully easy](https://gist.github.com/johan/10590467).
 
 ##Sätt upp servern
 
 Gör en mapp *MinecraftServer* på något lämpligt ställe. 
-Ladda ner den rekommenderade versionen av Canarymod, 1.2.0 för Minecraft 1.8, 
-[härifrån](http://canarymod.net/releases) och lägg den i mappen *MinecraftServer*.
+Be en mentor om senaste versionen av SpigotMC, om du inte vill bygga den själv.
+Lägg filerna craftbukkit-n.n.n.jar och spigot-n.n.n.jar  i mappen *MinecraftServer*.
 
-Öppna terminalen (Mac/Linux) eller DOS-fönstret (Windows).
+Öppna terminalen (Mac/L inux) eller DOS-fönstret (Windows).
 Gå till mappen *MinecraftServer* genom att använda kommandot *cd* (change directory).
 
-*Man går in en mapp med namnet *EnMapp* genom att skriva *cd EnMapp*.
-*Man går tillbaka (upp ett steg i filhierarkin) genom att skriva *cd ..*
-*Man ser alla filer och mappar där man befinner sig genom att skriva *ls*
+* Man går in en mapp med namnet *EnMapp* genom att skriva *cd EnMapp*.
+* Man går tillbaka (upp ett steg i filhierarkin) genom att skriva *cd ..*
+* Man ser alla filer och mappar där man befinner sig genom att skriva *ls*
 (Mac/Linux) eller *dir* (Windows).
 
 När du befinner dig i mappen *MinecraftServer*, skriv:
 
 ```
-java -Xmx1024M -jar CanaryMod-1.2.0.jar -o true
+java -Xmx1024M -jar spigot-n.n.n.jar -o true
 ```
 
 Första gången du kör detta kommandon skapas ett antal mappar och filer. 
@@ -103,13 +103,13 @@ Hämta senaste versionen av filen
 och placera den *MinecraftServer/plugins*. Kör kommandot igen:
 
 ```
-java -Xmx1024M -jar CanaryMod-1.2.0.jar -o true
+java -Xmx1024M -jar spigot-n.n.n.jar -o true
 ```
 
 Nu startar servern och det görs en ny mapp *scriptcraft* i mappen *MinecraftServer*.
 
 Avsluta servern genom att skriva *stop*.
-Avsluta alltid servern på detta vis, annars kan du skada din Minecraftvärld.
+Avsluta alltid servern på detta vis, annars kan du skada filen som innehåller din Minecraftvärld.
 
 ##Enklare start med ett startscript
 
@@ -119,10 +119,10 @@ För att på ett enkelt sätt kunna starta servern behöver du ett startscript.
 
 Öppna Notepad++ eller en annan texteditor och klistra in följande kod.
 ```
-java -jar CanaryMod-1.2.0.jar gui -o true -Xmx1024M -Djline.terminal=jline.UnsupportedTerminal
+java -jar spigot-n.n.n.jar -Xmx1024M
 pause
 ```
-Om din serverfil inte heter *CanaryMod-1.2.0.jar*
+Om din serverfil inte heter *spigot-n.n.n.jar*
 så byt ut filnamnet till rätt filnamn.
 
 Spara filen som *run.bat* i mappen MinecraftServer.
@@ -136,10 +136,10 @@ Starta servern genom att dubbelklicka på *run.bat*. Fortsätt sedan att [testa 
 ```bash
 #!/bin/bash
 cd "$( dirname "$0" )"
-java -jar CanaryMod-1.2.0.jar gui -o true -Xmx1024M -Djline.terminal=jline.UnsupportedTerminal
+java -jar spigot-n.n.n.jar -Xmx1024M
 ```
 
-Om din serverfil inte heter *CanaryMod-1.2.0.jar* så byt ut filnamnet (den gröna texten) till rätt filnamn.
+Om din serverfil inte heter *spigot-n.n.n.jar* så byt ut filnamnet (den gröna texten) till rätt filnamn.
 
 Spara filen som *start_server.command* i mappen *MinecraftServer*.
 
@@ -156,10 +156,10 @@ Starta servern genom att dubbelklicka på *start_server.command*. Fortsätt seda
 #!/bin/sh
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
-java -jar CanaryMod-1.2.0.jar gui -o true -Xmx1024M -Djline.terminal=jline.UnsupportedTerminal
+java -jar spigot-n.n.n.jar -Xmx1024M
 ```
 
-Om din serverfil inte heter *CanaryMod-1.2.0.jar* så byt ut filnamnet (den gröna texten) till rätt filnamn.
+Om din serverfil inte heter *spigot-n.n.n.jar* så byt ut filnamnet (den gröna texten) till rätt filnamn.
 
 Spara filen som *start_server.sh* i mappen *MinecraftServer*.
 
@@ -224,7 +224,7 @@ Om man vill göra tak till hus kan man använda sig av ett prisma. Prova kommand
 
 ###Färdiga program
 
-I mappen *CanaryMod/plugins/scriptcraft/plugins/drone/contrib*
+I mappen *plugins/scriptcraft/plugins/drone/contrib*
 finns exempelprogram som olika användare gjort. 
 Prova några av programmen genom att skriva:
 
