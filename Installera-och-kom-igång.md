@@ -72,7 +72,7 @@ Testa sedan att skriva in ```java -version``` igen. Nu bör svaret bli den senas
 ##Sätt upp servern
 
 Gör en mapp *MinecraftServer* på något lämpligt ställe. 
-Be en mentor om senaste versionen av [SpigotMC](https://github.com/walterhiggins/ScriptCraft/tree/master/lib) om du inte vill bygga den själv.
+Ladda ner senaste versionen av [SpigotMC:s jar-fil](https://github.com/walterhiggins/ScriptCraft/tree/master/lib), om du inte vill bygga den själv förstås :)
 Lägg filerna craftbukkit-n.n.n.jar och spigot-n.n.n.jar  i mappen *MinecraftServer*.
 
 Öppna terminalen (Mac/L inux) eller DOS-fönstret (Windows).
