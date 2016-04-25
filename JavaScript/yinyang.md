@@ -4,12 +4,12 @@ Yin och Yang
 yinyang.js har funktionen
 
 ```javascript
-function yinyang(matrial1, matrial2, radie, hojd)
+function yinyang(material1, material2, radie, hojd)
 ```
 
-som ritar upp yin & yang symbolen:
+som ritar upp yin & yang-symbolen:
 
-![Yin & Yang symbolen](images/yinyang.png)
+![Yin & Yang-symbolen](images/yinyang.png)
 
 Filen består dessutom av några hjälpfunktioner som används för att göra det hela
 lite lättare.
@@ -26,7 +26,7 @@ sidan om varandra.
 ```javascript
 function cirkel(matrial, radie, hojd)
 ```
-Cirkel är väldigt lik cylinder funktionen, skillnaden är att cylinder ritas ut 
+Cirkel är väldigt lik cylinder-funktionen, skillnaden är att cylinder ritas ut 
 till höger om där man tittar, medan cirkel ritas ut precis mitt framför.
 
 Den används till att rita upp två mindre cirklar innuti symbolen, här illustrerat 
