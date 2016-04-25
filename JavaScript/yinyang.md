@@ -15,7 +15,7 @@ Filen består dessutom av några hjälpfunktioner som används för att göra de
 lite lättare.
 
 ```javascript
-function halvcirkel(matrial, radie, hojd, left)
+function halvcirkel(material, radie, hojd, left)
 ```
 halvcirkel ritar en halvcirkel, antingen till vänster (om left = true) eller till
 höger (om left = false). Används till att lägga grunden för symbolen med två cirkelhalvor
@@ -24,7 +24,7 @@ sidan om varandra.
 ![Cirkelhalvor](images/halvor.png)
 
 ```javascript
-function cirkel(matrial, radie, hojd)
+function cirkel(material, radie, hojd)
 ```
 Cirkel är väldigt lik cylinder-funktionen, skillnaden är att cylinder ritas ut 
 till höger om där man tittar, medan cirkel ritas ut precis mitt framför.
