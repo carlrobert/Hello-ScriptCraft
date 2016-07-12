@@ -21,16 +21,17 @@ Här är sex steg för att komma igång. Resten av den här sidan hjälper dig m
 2. [Installera Java](#java)
 3. [Installera SpigotMC och ScriptCraft](#sätt-upp-servern)
 4. [Gör ett startscript](#enklare-start-med-ett-startscript)
-5. [Testa servern i Minecraft](#testa-servern-i-Minecraft)
+5. [Testa servern i Minecraft](#testa-servern-i-minecraft)
 6. [Prova några enkla byggkommandon](#några-enkla-byggkommandon)
 
 ##Ladda ner och installera en texteditor
 
 * **Kör du Windows?** 
-Ladda ner och installera [Notepad++](http://notepad-plus-plus.org/).
+Ladda ner och installera [Notepad++](http://notepad-plus-plus.org/). 
+Eller testa [Brackets](http://brackets.io/), speciellt om du är intresserad av att testa spelprogrammering med Phaser.
 
 * **Kör du OS X (Mac)?**
-Ladda ner och installera [Sublime Text](http://www.sublimetext.com/).
+Ladda ner och installera [Sublime Text](http://www.sublimetext.com/) eller [Brackets](http://brackets.io/).
 
 * **Kör du Linux?** Använd exempelvis *gedit* som följer med många Linux-distributioner.
 
