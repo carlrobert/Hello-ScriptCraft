@@ -15,7 +15,9 @@ För att kunna modda Minecraft måste du ha ett Minecraft-konto. Alla andra prog
 
 För några enkla programmeringsexempel, se nästa sida: [Programmera drönaren!](/Programmera-dr%C3%B6naren.md)
 
-Här är sex steg för att komma igång. Resten av den här sidan hjälper dig med dem.
+# Sex steg för att komma igång
+
+Resten av den här sidan hjälper dig med de sex stegen.
 
 * [A. Installera en texteditor](#a-ladda-ner-och-installera-en-texteditor)
 * [B. Installera Java](#b-java)
