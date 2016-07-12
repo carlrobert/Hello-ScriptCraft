@@ -17,14 +17,14 @@ För några enkla programmeringsexempel, se nästa sida: [Programmera drönaren!
 
 Här är sex steg för att komma igång. Resten av den här sidan hjälper dig med dem.
 
-1. [Installera en texteditor](#ladda-ner-och-installera-en-texteditor)
-2. [Installera Java](#java)
-3. [Installera SpigotMC och ScriptCraft](#sätt-upp-servern)
-4. [Gör ett startscript](#enklare-start-med-ett-startscript)
-5. [Testa servern i Minecraft](#testa-servern-i-minecraft)
-6. [Prova några enkla byggkommandon](#några-enkla-byggkommandon)
+* [A. Installera en texteditor](#a-ladda-ner-och-installera-en-texteditor)
+* [B. Installera Java](#b-java)
+* [C. Installera SpigotMC och ScriptCraft](#c-sätt-upp-servern)
+* [D. Gör ett startscript](#d-enklare-start-med-ett-startscript)
+* [E. Testa servern i Minecraft](#e-testa-servern-i-minecraft)
+* [F. Prova några enkla byggkommandon](#f-några-enkla-byggkommandon)
 
-##Ladda ner och installera en texteditor
+##A. Ladda ner och installera en texteditor
 
 * **Kör du Windows?** 
 Ladda ner och installera [Notepad++](http://notepad-plus-plus.org/). 
@@ -37,7 +37,7 @@ Ladda ner och installera [Sublime Text](http://www.sublimetext.com/) eller [Brac
 
 När man skriver kod använder man inte vanliga ordbehandlare (som exempelvis Word) eftersom ordbehandlare formaterar texten. Det finns speciella utvecklingsmiljöer gjorda för programmering som ofta är svåra att använda för nybörjare. Det finns också enklare texteditorer som inte är så avancerade men lättanvända. Här får du förslag på en texteditor som inte är allt för avancerad men funkar bra för programmering.
 
-##Java
+##B. Java
 
 Om du inte redan har Java installerat så [installera det](http://www.java.com/sv/)! Kör du Windows eller Linux så fortsätt till [Sätt upp servern](#sätt-upp-servern).
 
@@ -70,7 +70,7 @@ sudo ln -s '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin
 
 Testa sedan att skriva in ```java -version``` igen. Nu bör svaret bli den senaste versionen. Om inget funkar, kolla in [osx + java 7 = painfully easy](https://gist.github.com/johan/10590467).
 
-##Sätt upp servern
+##C. Sätt upp servern
 
 * Gör en mapp *MinecraftServer* på något lämpligt ställe. 
 * Ladda ner senaste versionen av [SpigotMC:s jar-fil](https://github.com/walterhiggins/ScriptCraft/tree/master/lib), om du inte vill bygga den själv förstås :)
@@ -112,7 +112,7 @@ Nu startar servern och det görs en ny mapp *scriptcraft* i mappen *MinecraftSer
 Avsluta servern genom att skriva *stop*.
 Avsluta alltid servern på detta vis, annars kan du skada filen som innehåller din Minecraftvärld.
 
-##Enklare start med ett startscript
+##D. Enklare start med ett startscript
 
 För att på ett enkelt sätt kunna starta servern behöver du ett startscript.
 
@@ -171,7 +171,7 @@ Skriv in följande kommando i terminalen: *chmod +x start_server.sh*
 
 Starta servern genom att skriva *server.sh* i terminalen.
 
-##Testa servern i Minecraft
+##E. Testa servern i Minecraft
 
 1. Starta servern.
 1. Gör dig själv till serveroperatör genom att skriva *op spelarnamn* i konsollen.
@@ -188,7 +188,7 @@ Ordet spelarnamn skall bytas mot ditt eget spelarnamn i Minecraft.
 */js 1+1*
 1. Om svaret *2.0* dyker upp så har du lyckats köra din första Javascript-kod i Minecraft!
 
-## Några enkla byggkommandon
+##F. Några enkla byggkommandon
 
 Alla byggblock i Minecraft har ett id-nummer. På sidan [Minecraft ID List](http://minecraft-ids.grahamedgecombe.com/) finns en fullständig lista. Exempelvis har guld id-nummer 41 och röd ull id-nummer 35:14.
 
