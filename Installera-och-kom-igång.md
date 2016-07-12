@@ -39,7 +39,7 @@ När man skriver kod använder man inte vanliga ordbehandlare (som exempelvis Wo
 
 ##Java
 
-Om du inte redan har Java installerat så [installera det](http://www.java.com/sv/)! Kör du Windows eller Linux så fortsätt till [Sätt upp servern](#sätt-upp-servern)
+Om du inte redan har Java installerat så [installera det](http://www.java.com/sv/)! Kör du Windows eller Linux så fortsätt till [Sätt upp servern](#sätt-upp-servern).
 
 ###Java-versioner på Mac
 
