@@ -76,7 +76,7 @@ Testa sedan att skriva in ```java -version``` igen. Nu bör svaret bli den senas
 * Ladda ner senaste versionen av [SpigotMC:s jar-fil](https://github.com/walterhiggins/ScriptCraft/tree/master/lib), om du inte vill bygga den själv förstås :)
 * Lägg filen *spigot-n.n.n.jar* i mappen *MinecraftServer*.
 
-Öppna terminalen (Mac/L inux) eller DOS-fönstret (Windows).
+Öppna terminalen (Mac OS/Linux) eller DOS-fönstret (Windows).
 Gå till mappen *MinecraftServer* genom att använda kommandot *cd* (change directory).
 
 * Man går in en mapp med namnet *EnMapp* genom att skriva *cd EnMapp*.
