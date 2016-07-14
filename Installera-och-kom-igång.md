@@ -246,3 +246,5 @@ Prova några av programmen genom att skriva:
 Om du vill göra ett längre program själv, måste du skriva det i texteditorn, spara filen, och sedan köra programmet inifrån Minecraft. Se nästa sida, Programmera drönaren!, för mer information.
 
 *Baserad på https://github.com/malinc/Modda-Minecraft-med-Scriptcraft*
+
+[Utskriftsversion](https://gitprint.com/carlrobert/Hello-ScriptCraft/blob/master/Installera-och-kom-ig%C3%A5ng.md)
