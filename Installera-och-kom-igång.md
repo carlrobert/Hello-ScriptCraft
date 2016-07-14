@@ -1,5 +1,7 @@
 #Installera och kom igång!
 
+[YouTube-versionen hittar du här](https://www.youtube.com/playlist?list=PL39Sm336N_h9yERO27GFJFDQBYE4ZbBIR)
+
 ScriptCraft är ett plugin till en Minecraft-server.
 Med ScriptCraft kan du modda Minecraft genom att programmera i Javascript. 
 ScriptCraft är speciellt gjord för nybörjare och innehåller bland annat en så kallad drönare (drone på engelska). 
