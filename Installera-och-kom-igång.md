@@ -188,9 +188,9 @@ Ordet spelarnamn skall bytas mot ditt eget spelarnamn i Minecraft.
 1. Klicka på Add server.
 1. Välj ett servernamn vilket som helst och skriv in localhost under Server Address.
 1. Börja spela på den nya servern.
-1. Klicka på t för att få upp en textrad som man kan skriva på. Skriv
-*/js 1+1*
-1. Om svaret *2.0* dyker upp så har du lyckats köra din första Javascript-kod i Minecraft!
+1. Klicka på `t` för att få upp chatten som man kan skriva på. Skriv
+`/js 1+1`
+1. Om svaret `2.0` dyker upp så har du lyckats köra din första JavaScript-kod i Minecraft!
 
 ##F. Några enkla byggkommandon
 
