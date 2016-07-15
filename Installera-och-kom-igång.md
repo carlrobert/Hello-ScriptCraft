@@ -192,6 +192,9 @@ Ordet spelarnamn skall bytas mot ditt eget spelarnamn i Minecraft.
 `/js 1+1`
 1. Om svaret `2.0` dyker upp så har du lyckats köra din första JavaScript-kod i Minecraft!
 
+###`stop` stänger av servern på rätt sätt
+Använd alltid kommandot `stop` i serverns (svarta) kommandofönster så minskar du risken att skada eller bli av med din Minecraft-värld.
+
 ##F. Några enkla byggkommandon
 
 Alla byggblock i Minecraft har ett id-nummer. På sidan [Minecraft ID List](http://minecraft-ids.grahamedgecombe.com/) finns en fullständig lista. Exempelvis har guld id-nummer 41 och röd ull id-nummer 35:14.
