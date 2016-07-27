@@ -208,7 +208,7 @@ Prova att skriva in kommandona:
 
 Ett rätblock har en bredd, ett djup och en höjd. Gör ett rätblock genom att skriva kommandot:
 ```/js box('41', 3, 5, 10)```
-Hur gör man ett rätblock av röd ull som är 2 block bred, 100 block hög och 1 block djupt? Testa dig fram!
+Hur gör man ett rätblock av röd ull som är 2 block brett, 100 block högt och 1 block djupt? Testa dig fram!
 
 ![Pelare av röd ull](https://cloud.githubusercontent.com/assets/4598641/6613915/90f4effc-c893-11e4-8a4b-d69aed0158ef.png)
 
