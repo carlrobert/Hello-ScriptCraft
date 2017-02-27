@@ -143,7 +143,7 @@ Starta servern genom att dubbelklicka på *run.bat*. Fortsätt sedan att [testa 
 ```bash
 #!/bin/bash
 cd "$( dirname "$0" )"
-java -jar spigot-n.n.n.jar -Xmx1024M
+java -jar -Xmx1024M spigot-n.n.n.jar
 ```
 
 Om din serverfil inte heter *spigot-n.n.n.jar* så byt ut filnamnet (den gröna texten) till rätt filnamn.
