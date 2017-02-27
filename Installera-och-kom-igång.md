@@ -173,7 +173,7 @@ Spara filen som *start_server.sh* i mappen *MinecraftServer*.
 Ändra behörigheten på startscriptet så att den blir körbar.
 Skriv in följande kommando i terminalen: *chmod +x start_server.sh*
 
-Starta servern genom att skriva *server.sh* i terminalen.
+Starta servern genom att skriva *start_server.sh* i terminalen.
 
 ##E. Testa servern i Minecraft
 
